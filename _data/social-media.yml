@@ -95,3 +95,13 @@ keybase:
   url   : https://www.keybase.io/
   icon  : fab fa-keybase
   color : 66ccff
+
+sapienzanlp:
+  url   : https://nlp.uniroma1.it/
+  icon  : fas fa-school
+  color : be0027
+  
+scholar: 
+  url   : https://scholar.google.com/
+  icon  : fas fa-graduation-cap
+  color : 1da1f2

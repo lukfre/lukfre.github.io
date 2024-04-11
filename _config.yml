@@ -1,9 +1,10 @@
 ### Site Settings ###
-title               : lukfre personal page
+title               : Home
 description         : >-
-                      I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
+                      I put lightning :zap: into thinly sliced rocks :rock:
+                      and trick them into pretending they're thinking. <br>
+                      Then, I trick other rocks into telling me if it worked. <br>
+                      :robot:
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : lukfre/lukfre.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
@@ -26,22 +27,24 @@ nav_exclude:                                            # The following paths ar
 author:
   name              : Luca Gioffrè
   image             : ./assets/undertale_ghost.png
+  github            : lukfre
+  gitlab            : balthier
+  linkedin          : luca_gioffre
+  twitter           : your_username   # TODO
+  sapienzanlp       : people
+  scholar           : your_username   # TODO
 #  behance           : your_username
 # dribbble          : your_username
 #  email             : mylastnamedomain.com # this goes to the buttons, no use in hiding the email
 #  facebook          : your_username
-  github            : lukfre
-  gitlab            : balthier
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : luca_gioffre
 #  medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-  twitter           : your_username   # TODO
 # vimeo             : your_username
 # youtube           : your_channel_name
 # keybase           : your_username
@@ -100,3 +103,4 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
+  - _site/
