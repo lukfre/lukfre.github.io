@@ -1,10 +1,10 @@
 ### Site Settings ###
 title               : Home
 description         : >-
-                      I put lightning :zap: into thinly sliced rocks :rock:
-                      and trick them into pretending they're thinking. <br>
-                      Then, I trick other rocks into telling me if it worked. <br>
-                      :robot:
+                      I put lightning into thinly sliced rocks and
+                      trick them into pretending they're thinking. <br>
+                      Then, I trick other rocks into telling me if it worked... <br>
+                      :rock: + :zap: = :robot:
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : lukfre/lukfre.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
