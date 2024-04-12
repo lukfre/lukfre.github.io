@@ -26,28 +26,21 @@ nav_exclude:                                            # The following paths ar
 ### Author Info ###
 author:
   name              : Luca Gioffrè
-  image             : ./assets/undertale_ghost.png
+  image             : ./assets/profile_pic.png
   github            : lukfre
   gitlab            : balthier
   linkedin          : luca_gioffre
   twitter           : your_username   # TODO
   sapienzanlp       : people
   scholar           : your_username   # TODO
-#  behance           : your_username
 # dribbble          : your_username
-#  email             : mylastnamedomain.com # this goes to the buttons, no use in hiding the email
-#  facebook          : your_username
+# email             : mylastnamedomain.com # this goes to the buttons, no use in hiding the email
+# facebook          : your_username
 # instagram         : your_username
 # kaggle            : your_username
-#  medium            : your_username
-# soundcloud        : your_username
+# medium            : your_username
 # spotify           : your_username
 # stackoverflow     : your_user_id
-# tumblr            : your_username.tumblr.com
-# twitch            : your_username
-# vimeo             : your_username
-# youtube           : your_channel_name
-# keybase           : your_username
 
 
 ### Posts ###
