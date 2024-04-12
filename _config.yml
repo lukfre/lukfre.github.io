@@ -4,7 +4,11 @@ description         : >-
                       I put lightning into thinly sliced rocks and
                       trick them into pretending they're thinking. <br>
                       Then, I trick other rocks into telling me if it worked... <br>
-                      :rock: + :zap: = :robot:
+                      :rock: + :zap: = :robot: <br> <br>
+                      Reach me at <br> 
+                      unscramble('it', 'diag.uniroma1', 'gioffre')<br>
+                      following the lastname at institution dot country pattern!
+
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : lukfre/lukfre.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
