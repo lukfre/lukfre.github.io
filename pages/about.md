@@ -19,6 +19,10 @@ Currently working on Semantic Text Representation, Summarization and QA.
 </div>
 -->
 
+<p class="text-center">
+{% include elements/button.html link="" text="Download CV" %}
+</p>
+
 ## **Timeline**
 
 <div class="row">
