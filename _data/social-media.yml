@@ -110,3 +110,8 @@ google_scholar:
   url   : https://scholar.google.com/
   icon  : ai ai-google-scholar
   color : 1da1f2
+
+cv:
+  url   :
+  icon  : ai ai-cv
+  color : 1db954
