@@ -7,9 +7,14 @@
         <div id="element">
           <img src="{{ site.author.image }}" alt="{{ site.title }}" class="circle-image wow animated zoomIn" data-wow-delay=".1s">
         </div>
-      </div>
-  
-      <p class="text-muted wow animated slideInUp" data-wow-delay=".15s">{{ site.description }}</p>
-  
+    </div>
+    <p class="text-muted wow animated slideInUp" data-wow-delay=".15s">
+        {{ site.description }}
+        <br>
+        {% include elements/button.html text="unscramble(:it:, diag.uniroma1, gioffre)" %}
+        <br>
+        <br>
+        Pattern: lastname at institution dot country
+    </p>
     </div>
   </div>
