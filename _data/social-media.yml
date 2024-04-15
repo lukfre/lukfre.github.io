@@ -105,3 +105,8 @@ scholar:
   url   : https://scholar.google.com/
   icon  : fas fa-graduation-cap
   color : 1da1f2
+
+google_scholar:
+  url   : https://scholar.google.com/
+  icon  : ai ai-google-scholar
+  color : 1da1f2

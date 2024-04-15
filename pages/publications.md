@@ -1,14 +1,13 @@
 ---
-layout: default
-title: Blog
-weight: 3
-permalink: /blog/
+layout: page
+title: Publications
+permalink: /publications/
+weight: 1
 ---
-
-{% include blog/search.html %}
-{% include blog/index.html %}
 <br><br>
-<p class="text-center wow animated slideInUp" data-wow-delay=".15s">There's nothing to see here...</p>
+<p class="text-center wow animated slideInUp" data-wow-delay=".15s">
+Waiting for publications...
+</p>
 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1920 1080">
     
     <g id="Layer_12 yellow-back-fig" data-name="Layer 12">

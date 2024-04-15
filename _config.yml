@@ -32,7 +32,7 @@ author:
   linkedin          : luca-gioffre
   twitter           : your_username   # TODO
   sapienzanlp       : people
-  scholar           : your_username   # TODO
+  google_scholar    : your_username   # TODO
 # dribbble          : your_username
 # email             : mylastnamedomain.com # this goes to the buttons, no use in hiding the email
 # facebook          : your_username
@@ -97,3 +97,4 @@ exclude:
   - LICENSE
   - "*.log"
   - _site/
+  - pages/blog.html   # not used for now

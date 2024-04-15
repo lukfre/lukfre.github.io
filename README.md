@@ -251,3 +251,11 @@ portfolYOU provides a good number of social networks, but if you want to add you
 
 ## Adding another page
 Simply create a `.md` in the root folder (better to put it in `<root>/pages/`), it will automatically appear in the menu. MAGIC!
+
+## Adding Acadimicons
+1. Download the icons from [here](https://jpswalsh.github.io/academicons/).
+2. Extract the `.zip` and put the content in the `assets/` folder.
+3. Insert this line at the start of `footer.html`, changing the version as it is fit.
+```html
+<link rel="stylesheet" href="./../assets/academicons-1.9.4/css/academicons.min.css">
+```
