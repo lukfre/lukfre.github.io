@@ -20,7 +20,7 @@ Currently working on Semantic Text Representation, Summarization and QA.
 -->
     
 <p class="text-center">
-{% include elements/button.html link="" text="Download CV" %}
+{% include elements/button.html link="../assets/cv.pdf" text="Download CV" %}
 </p>
 
 ## **Timeline**
