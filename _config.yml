@@ -59,24 +59,18 @@ plugins:
 
 author:
   name   : "Luca Gioffré"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "*PhD Student at SapienzaNLP Lab in Rome* :it:"
+  avatar : "/assets/images/bio-photo.png"
+  bio    : "*PhD Student in NLP at Sapienza, University of Rome* :it:"
   links:
-    # - label: "Website"
-    #   icon: "fas fa-fw fa-link"
-    #   url: "https://"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/luca-gioffre/"
     - label: "Scholar"
       icon: "fab fa-fw fa-google-scholar"
       url: "https://scholar.google.com/citations?user=jxAvKZ4AAAAJ&hl=it"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/luca-gioffre/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lukfre"
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   url: "https://instagram.com/"
 
 # footer:
 #   links:

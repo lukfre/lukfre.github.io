@@ -3,11 +3,11 @@ permalink: /about/
 title: "About"
 ---
 
-Hi! :wave: My name is Luca Gioffré (for those who can read it, the phonetic transcription is **[lˈuka d͡ʒoffrˈe]**).
+Hi! :wave: My name is Luca Gioffré (**[lˈuka d͡ʒoffrˈe]**).
 
 
-I'm a PhD Student in Natural Language Processing at [SapienzaNLP](https://nlp.uniroma1.it/) in Sapienza University in Rome :it:. 
-Before that, I graduated in Sapienza twice, with a Bachelor degree in Engineering in Computer Science and Automatic Systems and a Master degree in Engineering in Computer Science (although I changed my study plan quite a lot to be more AI-focused). 
+I'm a PhD Student in Natural Language Processing at [SapienzaNLP](https://nlp.uniroma1.it/) in Sapienza, University of Rome. 
+  Before that, I graduated in Sapienza twice, with a Bachelor degree in Engineering in Computer Science and Automatic Systems and a Master degree in Engineering in Computer Science (although I changed my study plan quite a lot to be more AI-focused). 
 
 This is where I share my academic work, personal projects and anything else I find interesting with the world!
 
@@ -18,16 +18,17 @@ This is where I share my academic work, personal projects and anything else I fi
 - Storytelling
 - Free and open-source software
 
-## Education
-- PhD Student at SapienzaNLP, Sapienza University, Rome, Italy -- 2023-2026 (expected)
-    - Project: Narrative Understanding and Interpretability of LLMs
-    - Supervisors: Prof. Roberto Navigli
-- MSc in Engineering in Computer Science, Sapienza University, Rome, Italy -- 2019-2023
-    - Erasmus in Örebro (**\[œrɛˈbruː\]**) Universitet, Örebro, Sweden -- 2020 
-    - Master Thesis: "Structured Information Representation for Long-Document Summarization", supervised by Prof. Roberto Navigli and Fabrizio Silvestri
-- Bachelor degree in Engineering in Computer Science and Automatic Systems, Sapienza University, Rome, Italy -- 2016-2019
-    - Thesis: Blockchain Networks for Copyright Protection, supervised by Prof. Andrea Vitaletti
-- Liceo Scientifico Giuseppe Peano, Monterotondo, Italy -- 2011-2019
+## Timeline
+- `2023-2026` (expected) -- **PhD Student** at [SapienzaNLP](https://nlp.uniroma1.it/), [Sapienza University](https://www.uniroma1.it/en/pagina-strutturale/home), Rome 🇮🇹
+    - **Project**: Narrative Understanding and Interpretability of LLMs
+    - **Supervisor**: Prof. [Roberto Navigli](https://www.diag.uniroma1.it/navigli/)
+    - **Teaching**: TA for the Master Course Multilingual Natural Language Processing (2023-2025) held at Sapienza, University, Rome
+- `2019-2023` -- **MSc in Engineering in Computer Science**, [Sapienza University](https://www.uniroma1.it/en/pagina-strutturale/home), Rome 🇮🇹
+    - **Master Thesis**: "*Structured Information Representation for Long-Document Summarization*", supervised by Prof. [Roberto Navigli](https://www.diag.uniroma1.it/navigli/) and [Fabrizio Silvestri](https://sites.google.com/diag.uniroma1.it/fabriziosilvestri)
+    - `2020` -- **Erasmus** in [Örebro Universitet](https://www.oru.se/english/), Örebro (**\[œrɛˈbruː\]**) 🇸🇪
+- `2016-2019` -- **Bachelor degree in Engineering in Computer Science and Automatic Systems**, [Sapienza University](https://www.uniroma1.it/en/pagina-strutturale/home), Rome 🇮🇹
+    - **Thesis**: "*Blockchain Networks for Copyright Protection*", supervised by Prof. Andrea Vitaletti
+- `2011-2019` -- **High School Diploma** at Liceo Scientifico Giuseppe Peano, Monterotondo 🇮🇹
 
 
 ## Hobbies
