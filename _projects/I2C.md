@@ -1,6 +1,6 @@
 ---
 name:  I2C project 
-tools: [I2C, driver, ]
+tools: [I2C, driver]
 image: ./../assets/i2c_videogame.jpg
 description: Operating System project
 ---
