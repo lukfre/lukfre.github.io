@@ -5,5 +5,13 @@
 layout: home
 author_profile: true
 entries_layout: grid
-classes: wide
 ---
+
+<!-- Show only posts that don't have 'projects' in their categories -->
+<div class="entries-{{ page.entries_layout | default: 'list' }}">
+  {% for post in site.posts %}
+    {% unless post.categories contains 'projects' %}
+      {% include archive-single.html type=page.entries_layout %}
+    {% endunless %}
+  {% endfor %}
+</div>

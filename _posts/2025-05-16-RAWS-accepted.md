@@ -8,7 +8,8 @@ tags:
   - Evaluation
   - LLMs
 ---
-📄 Read the full paper on arXiv: [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2503.14996) 
+📄 Read the full paper on arXiv [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2503.14996) 
+<!--more-->
 
 <img src="../../assets/images/acl2025_id-square_black_600x600.png" alt="ACL2025 Logo" width="300"/>
 
