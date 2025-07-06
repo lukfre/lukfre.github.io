@@ -1,5 +1,5 @@
 ---
-title: "Right Answer, Wrong Score - Paper Accepted"
+title: "Right Answer, Wrong Score -- Paper Accepted"
 excerpt_separator: "<!--more-->"
 categories:
   - Publications

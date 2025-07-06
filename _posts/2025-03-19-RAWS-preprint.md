@@ -1,5 +1,5 @@
 ---
-title: "Right Answer, Wrong Score - Paper Preprint"
+title: "Right Answer, Wrong Score -- Paper Preprint"
 excerpt_separator: "<!--more-->"
 categories:
   - Publications

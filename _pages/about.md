@@ -20,9 +20,10 @@ This is where I share my academic work, personal projects and anything else I fi
 
 ## Timeline
 - `2023-2026` (expected) -- **PhD Student** at [SapienzaNLP](https://nlp.uniroma1.it/), [Sapienza University](https://www.uniroma1.it/en/pagina-strutturale/home), Rome 🇮🇹
-    - **Project**: Narrative Understanding and Interpretability of LLMs
-    - **Supervisor**: Prof. [Roberto Navigli](https://www.diag.uniroma1.it/navigli/)
-    - **Teaching**: TA for the Master Course Multilingual Natural Language Processing (2023-2025) held at Sapienza, University, Rome
+    - **Project**: Narrative Understanding and Interpretability of LLMs -- **Supervisor**: Prof. [Roberto Navigli](https://www.diag.uniroma1.it/navigli/)
+    - `2025` -- **Teaching**: TA for the Master Course [Multilingual Natural Language Processing 2025](https://naviglinlp.blogspot.com/2025/) held at Sapienza
+    - `2024` -- **Summer School**: [LxMLS 2024](https://bgmartins.github.io/lxmls-website-2024/index.html) 🇵🇹 ([post]({% link _posts/2024-07-11-LxMLS.md %}))
+    - `2024` -- **Teaching**: TA for the Master Course [Multilingual Natural Language Processing 2024](https://naviglinlp.blogspot.com/2024/) held at Sapienza
 - `2019-2023` -- **MSc in Engineering in Computer Science**, [Sapienza University](https://www.uniroma1.it/en/pagina-strutturale/home), Rome 🇮🇹
     - **Master Thesis**: "*Structured Information Representation for Long-Document Summarization*", supervised by Prof. [Roberto Navigli](https://www.diag.uniroma1.it/navigli/) and [Fabrizio Silvestri](https://sites.google.com/diag.uniroma1.it/fabriziosilvestri)
     - `2020` -- **Erasmus** in [Örebro Universitet](https://www.oru.se/english/), Örebro (**\[œrɛˈbruː\]**) 🇸🇪
@@ -33,3 +34,6 @@ This is where I share my academic work, personal projects and anything else I fi
 
 ## Hobbies
 - [Reading](_blog)
+
+
+*[LxMLS]: Lisbon Machine Learning Summer School

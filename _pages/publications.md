@@ -10,7 +10,7 @@ Can't spoiler them yet! :eyes:
 ## 2025
 **Right Answer, Wrong Score: Uncovering the Inconsistencies of LLM Evaluation in Multiple-Choice Question Answering**
 --
-Francesco Maria Molfese, Luca Moroni, *Luca Gioffré*, Alessandro Scirè, Simone Conia, Roberto Navigli 
+*Francesco Maria Molfese, Luca Moroni, Luca Gioffré, Alessandro Scirè, Simone Conia, Roberto Navigli* 
 -- 
 ACL Findings 2025  
 [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2503.14996) 
