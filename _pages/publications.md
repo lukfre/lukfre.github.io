@@ -13,6 +13,7 @@ Can't spoiler them yet! :eyes:
 *Francesco Maria Molfese, Luca Moroni, Luca Gioffré, Alessandro Scirè, Simone Conia, Roberto Navigli* 
 -- 
 ACL Findings 2025  
+[![ACL](https://img.shields.io/badge/ACL-2025-red)](https://aclanthology.org/2025.findings-acl.950/)
 [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2503.14996) 
 [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FCD21D)](https://huggingface.co/datasets/sapienzanlp/MMLU-Adversarial) 
 [![GitHub](https://img.shields.io/badge/GitHub-Official Repository-blue)](https://github.com/Andrew-Wyn/metaQAeval)

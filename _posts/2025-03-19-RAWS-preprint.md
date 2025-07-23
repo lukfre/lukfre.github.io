@@ -1,6 +1,6 @@
 ---
 title: "Right Answer, Wrong Score -- Paper Preprint"
-#excerpt_separator: "<!--more-->"
+excerpt_separator: "<!--more-->"
 categories:
   - Publications
 tags:
@@ -8,8 +8,8 @@ tags:
   - Evaluation
   - LLMs
 ---
-📄 Read the full paper on arXiv [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2503.14996)
-
+📄 Read the full paper on ACL Proceedings [![ACL](https://img.shields.io/badge/ACL-2025-red)](https://aclanthology.org/2025.findings-acl.950/) or on arXiv [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2503.14996) 
+<!--more-->
 
 ## Can we truly trust LLM evaluation scores? 🤔
 
