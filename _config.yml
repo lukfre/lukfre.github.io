@@ -65,13 +65,15 @@ author:
     - label: "Scholar"
       icon: "fab fa-fw fa-google-scholar"
       url: "https://scholar.google.com/citations?user=jxAvKZ4AAAAJ&hl=it"
+    - label: "Semantic Scholar"
+      icon: "fas fa-solid fa-book"
+      url: "https://www.semanticscholar.org/author/Luca-Gioffre/2350859151"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/luca-gioffre/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lukfre"
-
 # footer:
 #   links:
 #     - label: "Twitter"
