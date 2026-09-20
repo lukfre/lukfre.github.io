@@ -1,0 +1,204 @@
+cv:
+  # name: Luca Gioffré
+  # label: PhD Student
+  # email: gioffre@diag.uniroma1.it
+  # location: Rome, Italy
+  # image: ""
+  summary: >
+    Luca Gioffré is a third-year Ph.D. student in the Department of Computer, Control, and Managemenet Engineering at Sapienza University of Rome, where he is a member of the [Sapienza NLP Lab](https://nlp.uniroma1.it), under the supervision of [Prof. Roberto Navigli](https://www.diag.uniroma1.it/~navigli/).
+    <br>
+    He has authored several publications in top-tier NLP conferences, including ACL and EMNLP, as well as at CLiC-it, the Italian Conference on Computational Linguistics.
+    <br>
+    His research centers on reading comprehension over long-form narrative documents, first through evaluation and meta-evaluation, and now on improving how models extract information and reason over long, stylistically difficult texts via targeted training methods.
+    <br>
+    He also contributes to the [Minerva LLM family](https://minerva-ai.org/en), where he works on post-training and evaluation.
+
+  social_networks:
+    - network: GitHub
+      username: lukfre
+    - network: LinkedIn
+      username: luca-gioffre
+
+  address:
+    city: Rome
+    region: Italy
+    countryCode: IT
+
+  sections:
+    Education:
+      - institution: Sapienza, University of Rome
+        location: Rome, Italy
+        url: https://www.uniroma1.it/
+        area: Computational Linguistics, NLP
+        studyType: PhD in Artificial Intelligence
+        start_date: 2023
+        end_date: 2026
+        highlights: ""
+
+      - institution: Sapienza, University of Rome
+        location: Rome, Italy
+        url: https://www.uniroma1.it/
+        area: Engineering in Computer Systems
+        studyType: M.Sc. Degree
+        start_date: 2020
+        end_date: 2023
+
+      - institution: Örebro Universitet
+        location: Örebro, Sweden
+        url: https://www.oru.se/english/
+        area: Artificial Intelligence
+        studyType: 6-month Exchange Program
+        start_date: 2020-01-19
+        end_date: 2020-07-19
+
+      - institution: Sapienza, University of Rome
+        location: Rome, Italy
+        url: https://www.uniroma1.it/
+        area: Ingegneria Informatica, Automatica e Gestionale
+        studyType: Bachelor Degree
+        start_date: 2016
+        end_date: 2019
+
+      - institution: Liceo Scientifico G. Peano
+        location: Monterotondo, Italy
+        url: https://www.liceopeanomonterotondo.edu.it/
+        area: Liceo Scientifico (STEM)
+        studyType: High school diploma
+        start_date: 2011
+        end_date: 2016
+
+    Experience:
+      - company: SoftConf
+        position: Reviewer for Conference Papers
+        location: Remote
+        start_date: 2026
+        summary: Reviewer for the CLiC-it conference.
+
+      - company: ACL Rolling Review
+        position: Reviewer for Conference Papers
+        location: Remote
+        start_date: 2024
+        summary: Reviewer for the ACL Rolling Review, a continuous peer review platform for NLP research papers.
+
+      - company: Sapienza, University of Rome
+        position: Teaching Assistant
+        location: Rome, Italy
+        start_date: 2023
+        end_date: 2026
+        summary: M.Sc. course "Multilingual Natural Language Processing"
+        highlights:
+          - "Preparation of lectures and assignments." 
+          - "Graded assignments and exams."
+
+
+    # Volunteer: # same as Experience, but for volunteer work
+
+    Awards:
+      - title: Outstanding contribution to Italian NLP resources
+        authors:
+          - Luca Gioffré
+          - Marina Iuliana Aur
+          - Francesco Ortame
+          - Luca Moroni
+          - Alberte Fernández-Castro
+          - Elena Marafatto
+          - Roberto Navigli
+        url: https://clic2026.unipa.it/awards/
+        date: 2026-09-16
+        location: Palermo, Italy
+        awarder: "12th Italian Conference on Computational Linguistics (CLiC-it)<br><b>Committee</b>: Francesco Cutugno, Malvina Nissim, and Roberto Zamparelli"
+        # summary: Francesco Cutugno, Malvina Nissim, and Roberto Zamparelli awarded the outstanding contribution to Italian NLP resources to the authors of Dromedario 3,
+
+    Publications:
+      # - title: "INDAQA2 - A Large Italian Narrative QA Benchmark: A CALAMITA 2026 Challenge"
+      #   authors:
+      #     - Luca Gioffré
+      #     - Luca Moroni
+      #     - Alberte Fernández-Castro
+      #     - Elena Marafatto
+      #     - Giacomo Garufi
+      #     - Roberto Navigli
+      #   publisher: "CEUR Workshop Proceedings (EVALITA 2026)"
+      #   releaseDate: 2026-02-01
+      #   url: "https://apa.dipsco.unitn.it/evalita2026/69.pdf"
+      #   summary: ""
+
+      # - title: "What We Learned from Continually Training Minerva: A Case Study on Italian"
+      #   authors:
+      #     - Luca Moroni
+      #     - Tommaso Bonomo
+      #     - Luca Gioffré
+      #     - Lu Xu
+      #     - Domenico Fedele
+      #     - Leonardo Colosi
+      #     - Andrei Stefan Bejgu
+      #     - Alessandro Scirè
+      #     - Roberto Navigli
+      #   publisher: "CEUR Workshop Proceedings (CLiC-it 2025)"
+      #   releaseDate: 2025-09-01
+      #   url: "https://aclanthology.org/2025.clicit-1.72/"
+      #   summary: ""
+
+      # - title: "LiteraryQA: Towards Effective Evaluation of Long-document Narrative QA"
+      #   authors:
+      #     - Tommaso Bonomo
+      #     - Luca Gioffré
+      #     - Roberto Navigli
+      #   publisher: "Proceedings of EMNLP 2025"
+      #   releaseDate: 2025-11-01
+      #   url: "https://aclanthology.org/2025.emnlp-main.1729/"
+      #   summary: "Introduces LiteraryQA, a high-quality subset of NarrativeQA focused on literary works, with a human- and LLM-validated pipeline for correcting low-quality QA samples. Performs the first meta-evaluation of automatic metrics (n-gram-based, encoder-based, and LLM-as-a-Judge) over the narrative domain."
+
+      # - title: "Right Answer, Wrong Score: Uncovering the Inconsistencies of LLM Evaluation in Multiple-Choice Question Answering"
+      #   authors:
+      #     - Francesco Maria Molfese
+      #     - Luca Moroni
+      #     - Luca Gioffré
+      #     - Alessandro Scirè
+      #     - Simone Conia
+      #     - Roberto Navigli
+      #   publisher: "Findings of ACL 2025"
+      #   releaseDate: 2025-07-01
+      #   url: "https://aclanthology.org/2025.findings-acl.950/"
+      #   summary: "Systematically analyzes inconsistencies in MCQA evaluation strategies for LLMs, showing that traditional methods underestimate model capabilities and revealing a trade-off between format constraints and free-form reasoning."
+
+    # Skills:
+    #   - name: Physics
+    #     level: Master
+    #     icon: fa-solid fa-hashtag
+    #     keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+
+    Projects:
+      - name: Minerva AI
+        logo: Minerva-logo-v.svg
+        summary: Minerva is the first family of LLMs trained from scratch on Italian data.
+        start_date: 2024
+        end_date:
+        location: Rome, Italy
+        url: https://minerva-ai.org/en
+        highlights:
+          - "Contributed to the post-training and evaluation phase of Minerva."
+
+    Languages:
+      - name: Italian
+        summary: "Native speaker"
+
+      - name: English
+        summary: "IELTS Academic 7.5 | C1"
+
+    # Interests:
+    #   - name: Physics
+    #     icon: fa-solid fa-tag
+    #     keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+
+    # Certificates:
+    #   - name: Machine Learning
+    #     date: 2018-01-01
+    #     issuer: Stanford University
+    #     icon: fa-solid fa-location-dot
+
+    References:
+      - name: Professor Roberto Navigli
+        icon: fa-solid fa-laptop
+        reference: Roberto Navigli is a full professor of Natural Language Processing in the Department of Computer, Control and Management Engineering at the Sapienza University of Rome, the head of the Sapienza NLP Group, and a Fellow of AAAI, ACL, EurAI and ELLIS. In 2007 he received a Ph.D. in Computer Science from "La Sapienza" (recipient of the Marco Cadoli 2007 AI\*IA prize for the Best Ph.D. Thesis in AI). In 2013 he received the Marco Somalvico AI\*IA prize, awarded to the best young Italian researcher in AI, who has provided a significant, highly-innovative personal contribution in AI.
+        url: https://www.diag.uniroma1.it/~navigli/

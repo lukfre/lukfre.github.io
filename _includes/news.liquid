@@ -1,0 +1,59 @@
+<div class="news">
+  {% if site.news != blank %}
+    {% assign news_size = site.news | size %}
+    <div
+      class="table-responsive"
+      {% if include.limit and page.announcements.scrollable and news_size > 3 %}
+        style="max-height: 60vw"
+      {% endif %}
+    >
+      <table class="table table-sm table-borderless">
+        {% comment %}
+          `limit` is only passed from the about page. Archived items (old
+          university projects) stay out of that list but remain on /news/.
+        {% endcomment %}
+        {% assign news = site.news | reverse %}
+        {% if include.limit %}
+          {% assign news = news | where_exp: 'item', 'item.archive != true' %}
+        {% endif %}
+        {% if include.limit and page.announcements.limit %}
+          {% assign news_limit = page.announcements.limit %}
+        {% else %}
+          {% assign news_limit = news_size %}
+        {% endif %}
+        {% comment %}
+          Emit a labelled separator whenever a named `group` starts. Ungrouped
+          items (the real news) run first with no header.
+        {% endcomment %}
+        {% assign shown_group = '' %}
+        {% for item in news limit: news_limit %}
+          {% assign item_group = item.group | default: '' %}
+          {% if item_group != '' and item_group != shown_group %}
+            <tr class="news-group">
+              <td colspan="2">
+                <span>{{ item_group }}</span>
+              </td>
+            </tr>
+            {% assign shown_group = item_group %}
+          {% endif %}
+          <tr>
+            <th scope="row" style="width: 15%">{{ item.date | date: '%Y - %b' }}</th>
+            <td>
+              {% assign news_body = item.content | strip_html | strip %}
+              {% if item.inline %}
+                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+              {% elsif news_body == '' %}
+                {% comment %} No body to open — show the headline, but do not link it {% endcomment %}
+                <span class="news-title">{{ item.title }}</span>
+              {% else %}
+                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  {% else %}
+    <p>No news so far...</p>
+  {% endif %}
+</div>

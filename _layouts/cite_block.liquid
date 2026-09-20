@@ -1,0 +1,74 @@
+---
+---
+{% comment %}
+  Citation block generated from _bibliography/papers.bib.
+
+  Add `bib_key: <entry key>` to a news post's front matter and
+  _layouts/post.liquid renders this automatically — see
+  _includes/paper_citation.liquid.
+{% endcomment %}
+
+{%- assign n_authors = entry.author_array | size -%}
+{%- assign venue = entry.booktitle | default: entry.journal -%}
+
+{%- capture authors_full -%}
+  {%- for a in entry.author_array -%}
+    {%- unless forloop.first -%}
+      {%- if forloop.last -%}{% if n_authors > 2 %}, and {% else %} and {% endif %}{%- else -%}, {% endif -%}
+    {%- endunless -%}
+    {{- a.first }} {{ a.last -}}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{%- capture authors_short -%}
+  {%- if n_authors == 1 -%}
+    {{- entry.author_array[0].last -}}
+  {%- elsif n_authors == 2 -%}
+    {{- entry.author_array[0].last }} and {{ entry.author_array[1].last -}}
+  {%- else -%}
+    {{- entry.author_array[0].last }} et al.
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture plain_text -%}
+  {{- authors_full | strip }}. {{ entry.year }}. {{ entry.title }}.
+  {%- if venue %} In {{ venue }}{% endif -%}
+  {%- if entry.pages %}, pages {{ entry.pages | replace: '--', '–' }}{% endif -%}
+  {%- if entry.address %}, {{ entry.address }}{% endif %}.
+  {%- if entry.publisher %} {{ entry.publisher }}.{% endif -%}
+{%- endcapture -%}
+
+{%- comment -%}
+  Fall back url -> html -> doi. With none of them a markdown link would render
+  as [Title]() with an empty target, so drop the link syntax entirely.
+{%- endcomment -%}
+{%- capture pub_link -%}
+  {%- if entry.url -%}{{ entry.url }}
+  {%- elsif entry.html -%}{{ entry.html }}
+  {%- elsif entry.doi -%}https://doi.org/{{ entry.doi }}
+  {%- endif -%}
+{%- endcapture -%}
+{%- assign pub_link = pub_link | strip -%}
+
+{%- capture markdown_text -%}
+  {%- if pub_link != '' -%}
+    [{{ entry.title }}]({{ pub_link }})
+  {%- else -%}
+    {{ entry.title }}
+  {%- endif %} ({{ authors_short | strip }}, {{ entry.abbr | default: entry.year }})
+{%- endcapture -%}
+
+<div class="paper-citation">
+  {%- comment -%}
+    Use the highlight tag rather than a hand-written pre block: only the tag
+    runs content through Rouge, which is what produces the syntax colouring.
+  {%- endcomment -%}
+  <h5>Plain text</h5>
+  {% highlight text %}{{ plain_text | strip }}{% endhighlight %}
+
+  <h5>Markdown</h5>
+  {% highlight markdown %}{{ markdown_text | strip }}{% endhighlight %}
+
+  <h5>BibTeX</h5>
+  {% highlight bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endhighlight %}
+</div>

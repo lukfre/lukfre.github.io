@@ -1,0 +1,15 @@
+"ACL 2025":
+  url: https://2025.aclweb.org/
+  color: "#c8102e"
+"EMNLP 2025":
+  url: https://2025.emnlp.org/
+  color: "#0092ca"
+"CLiC-it 2025":
+  url: https://clic2025.unica.it/
+  color: "forestgreen"
+"CLiC-it 2026":
+  url: https://clic2026.unipa.it/
+  color: "forestgreen"
+"EVALITA 2026":
+  url: https://www.evalita.it/campaigns/evalita-2026/
+  color: "teal"

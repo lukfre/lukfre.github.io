@@ -1,0 +1,111 @@
+@inproceedings{gioffre-2026-dromedario3,
+  title     = {Dromedario 3: Localizing the T{\"u}lu 3 Dataset to Italian},
+  abbr      = {CLiC-it 2026},
+  author    = {Gioffr{\'e}, Luca and Aur, Marina Iuliana and Ortame, Francesco and Moroni, Luca and Fern{\'a}ndez-Castro, Alberte and Marafatto, Elena and Navigli, Roberto},
+  booktitle = {Proceedings of the Twelfth Italian Conference on Computational Linguistics (CLiC-it 2026)},
+  editor    = {Basile, Valerio and Croce, Danilo and Passaro, Lucia C. and Pirrone, Roberto},
+  year      = {2026},
+  address   = {Palermo, Italy},
+  month     = sep
+}
+
+@inproceedings{gioffre-etal-2026-INDAQA2,
+    title = "INDAQA2 - A Large Italian Narrative QA Benchmark: A CALAMITA 2026 Challenge",
+    abbr="EVALITA 2026",
+    author = "Gioffr{\'e}, Luca  and
+      Moroni, Luca and
+      Fernández-Castro, Alberte and
+      Marafatto, Elena and
+      Garufi, Giacomo and
+      Navigli, Roberto",
+    editor = "Cutugno, Francesco and
+    Miaschi, Alessio and
+    Aprosio, Alessio Palmero and
+    Rambelli, Giulia and
+    Siciliani, Lucia and
+    Stranisci, Marco Antonio",
+    booktitle = " Proceedings of the 9th Evaluation Campaign of Natural Language Processing and Speech Tools for Italian. Final Workshop (EVALITA 2026)",
+    month = feb,
+    year = "2026",
+    address = "Bari, Italy",
+    publisher = "CEUR Workshop Proceedings",
+    url = "https://apa.dipsco.unitn.it/evalita2026/69.pdf",
+    abstract = "Long-context comprehension and reasoning remain largely underexplored in the evaluation of Italian Large Language Models (LLMs). Existing Italian benchmarks primarily focus on short or medium-length inputs, offering limited insight into models’ ability to process extended narratives. To address this gap, we introduce INDAQA2, a substantially revised and expanded version of INDAQA, a benchmark for narrative question answering on original Italian literary texts. The new version comprises an expanded corpus of 461 total books, introduces a multiple-choice question answering format alongside the original open-ended tasks, and features manually curated texts drawn exclusively from works originally written in Italian, thus avoiding artifacts introduced by translation. The benchmark evaluates long-context understanding over complete books of up to 250K tokens, testing complementary comprehension skills through a dual-structure design: global narrative understanding, assessed via questions derived from book summaries, and local precision, assessed via questions grounded in specific passages and entity-level details. By supporting both open-ended and multiple-choice question answering formats, INDAQA2 enables evaluation of both generative capabilities and discriminative reasoning, facilitating comprehensive and scalable comparison across models. Our evaluation of several Italian-specialized and multilingual models reveals significant performance disparities across task formats and highlights limitations in how current Italian models utilize extended contexts."
+}
+
+@inproceedings{moroni-etal-2025-learned,
+    title = "What We Learned from Continually Training Minerva: A Case Study on {I}talian",
+    abbr="CLiC-it 2025",
+    author = "Moroni, Luca  and
+      Bonomo, Tommaso  and
+      Gioffr{\'e}, Luca  and
+      Xu, Lu  and
+      Fedele, Domenico  and
+      Colosi, Leonardo  and
+      Bejgu, Andrei Stefan  and
+      Scir{\`e}, Alessandro  and
+      Navigli, Roberto",
+    editor = "Bosco, Cristina  and
+      Jezek, Elisabetta  and
+      Polignano, Marco  and
+      Sanguinetti, Manuela",
+    booktitle = "Proceedings of the Eleventh Italian Conference on Computational Linguistics (CLiC-it 2025)",
+    month = sep,
+    year = "2025",
+    address = "Cagliari, Italy",
+    publisher = "CEUR Workshop Proceedings",
+    url = "https://aclanthology.org/2025.clicit-1.72/",
+    pages = "760--774",
+    ISBN = "979-12-243-0587-3",
+    abstract = "Modern Large Language Models (LLMs) are commonly trained through a multi-stage pipeline encompassing pretraining and supervised finetuning. While recent studies have extensively investigated the benefits of continual pretraining on high-quality data, these efforts have focused primarily on English. In this work, we explore the effectiveness of various data mixtures in a continual pretraining setting to enhance performance on Italian-language tasks. Leveraging Minerva-7B, a fully open-source LLM pretrained on a corpus composed of 50% Italian, we define and evaluate three distinct data recipes–comprising mathematical, encyclopedic, and copyrighted content–spanning both Italian and English. We also investigate the effect of extending the model’s context window during continual pretraining on its ability to handle long-context tasks. To support our evaluation, we introduce INDAQA, a new benchmark for narrative question answering in Italian. Our results reveal that both data composition and increased context length substantially improve performance, offering valuable insights into continual pretraining strategies for less represented languages within an open scientific framework."
+}
+
+@inproceedings{bonomo-etal-2025-literaryqa,
+    title = "{L}iterary{QA}: Towards Effective Evaluation of Long-document Narrative {QA}",
+    abbr="EMNLP 2025",
+    author = "Bonomo, Tommaso  and
+      Gioffr{\'e}, Luca  and
+      Navigli, Roberto",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.1729/",
+    doi = "10.18653/v1/2025.emnlp-main.1729",
+    pages = "34086--34107",
+    ISBN = "979-8-89176-332-6",
+    abstract = "Question Answering (QA) on narrative text poses a unique challenge to current systems, requiring a deep understanding of long, complex documents. However, the reliability of NarrativeQA, the most widely used benchmark in this domain, is hindered by noisy documents and flawed QA pairs. In this work, we introduce LiteraryQA, a high-quality subset of NarrativeQA focused on literary works. Using a human- and LLM-validated pipeline, we identify and correct low-quality QA samples while removing extraneous text from source documents. We then carry out a meta-evaluation of automatic metrics to clarify how systems should be evaluated on LiteraryQA.This analysis reveals that all n-gram-based metrics have a low system-level correlation to human judgment, while LLM-as-a-Judge evaluations, even with small open-weight models, can strongly agree with the ranking identified by humans.Finally, we benchmark a set of long-context LLMs on LiteraryQA. We release our code and data at https://github.com/sapienzaNLP/LiteraryQA.",
+    selected = {true}
+}
+
+@inproceedings{molfese-etal-2025-right,
+    title = "Right Answer, Wrong Score: Uncovering the Inconsistencies of {LLM} Evaluation in Multiple-Choice Question Answering",
+    abbr="ACL 2025",
+    author = "Molfese, Francesco Maria  and
+      Moroni, Luca  and
+      Gioffr{\'e}, Luca  and
+      Scir{\`e}, Alessandro  and
+      Conia, Simone  and
+      Navigli, Roberto",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.950/",
+    doi = "10.18653/v1/2025.findings-acl.950",
+    pages = "18477--18494",
+    ISBN = "979-8-89176-256-5",
+    abstract = "One of the most widely used tasks for evaluating Large Language Models (LLMs) is Multiple-Choice Question Answering (MCQA). While open-ended question answering tasks are more challenging to evaluate, MCQA tasks are, in principle, easier to assess, as the model{'}s answer is thought to be simple to extract and is compared directly to a set of predefined choices. However, recent studies have started to question the reliability of MCQA evaluation, showing that multiple factors can significantly impact the reported performance of LLMs, especially when the model generates free-form text before selecting one of the answer choices. In this work, we shed light on the inconsistencies of MCQA evaluation strategies, which can lead to inaccurate and misleading model comparisons. We systematically analyze whether existing answer extraction methods are aligned with human judgment, and how they are influenced by answer constraints in the prompt across different domains. Our experiments demonstrate that traditional evaluation strategies often underestimate LLM capabilities, while LLM-based answer extractors are prone to systematic errors. Moreover, we reveal a fundamental trade-off between including format constraints in the prompt to simplify answer extraction and allowing models to generate free-form text to improve reasoning. Our findings call for standardized evaluation methodologies and highlight the need for more reliable and consistent MCQA evaluation practices.",
+    selected = {true}
+}
+

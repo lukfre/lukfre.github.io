@@ -1,0 +1,291 @@
+/*****************************
+ * CV shared styles
+ *****************************/
+
+div.container-link-button {
+  margin-right: 0.5rem;
+}
+
+table.table-cv {
+  background-color: transparent !important;
+
+  // Pin the table to the column width. While it was shrink-to-fit, its width
+  // was set by its widest row — the location line — and the badge, centred
+  // inside it, drifted right as the location got longer. At 100% the location
+  // can no longer influence it, so every badge centres on the column's axis.
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+
+  td,
+  th {
+    padding: 1px;
+    text-align: center;
+  }
+}
+
+a.btncv {
+  color: var(--global-text-color) !important;
+  border: 1px solid var(--global-text-color) !important;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.7rem;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+a.btncv:hover {
+  color: var(--global-theme-color) !important;
+  border-color: var(--global-theme-color) !important;
+  text-decoration: none !important;
+}
+
+/*****************************
+ * CV TIME_TABLE styles
+ *****************************/
+
+p.location {
+  font-size: 0.7rem;
+
+  // Previously white-space: nowrap. Now that the cell is a fixed width, nowrap
+  // made a long location overflow sideways into the next column instead of
+  // wrapping. Leaving it inline lets the cell's text-align: center centre every
+  // line — icon included — and wrap anything too long to fit.
+  white-space: normal;
+}
+
+i.iconlocation {
+  color: var(--global-theme-color);
+  font-size: 0.8rem;
+
+  // Block-level puts the pin on its own line. Font Awesome sets
+  // width: var(--fa-width, 1.25em) on the icon, so this is a block box with a
+  // fixed width — the parent's text-align: center cannot centre it (that only
+  // affects inline content). Auto margins do.
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.15rem;
+}
+
+// Trophy marker under the Awards badge — same treatment as i.iconlocation:
+// block-level so it sits on its own line, auto margins to centre it (Font
+// Awesome gives icons a fixed width, so text-align alone will not).
+i.iconaward {
+  color: var(--global-theme-color);
+  font-size: 0.8rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.15rem;
+}
+
+i.iconinstitution {
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+  margin-right: 0.3rem;
+}
+
+i.icondepartment {
+  color: var(--global-theme-color);
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+
+table.institution {
+  margin-bottom: 1rem;
+}
+
+td.department {
+  font-size: 0.8rem;
+}
+
+div.container-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/*****************************
+ * CV MAP styles
+ *****************************/
+
+div.container-pdf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/*****************************
+ * CV LIST_GROUPS styles
+ *****************************/
+
+div.list-groups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: center;
+}
+
+div.list-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+td.list-group-category {
+  color: var(--global-theme-color);
+  margin-bottom: 0.5rem;
+}
+
+td.list-group-category-icon {
+  font-size: 0.8rem;
+  color: var(--global-theme-color);
+  width: 1.4rem;
+  padding-right: 0.4rem;
+}
+
+td.list-group-name {
+  font-size: 0.8rem;
+}
+
+td.list-group-level {
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+}
+
+td.list-group-school {
+  font-size: 0.7rem;
+  padding-left: 0.5rem;
+  text-align: center;
+}
+
+p.list-group-time {
+  font-size: 0.7rem;
+  padding-left: 0.5rem;
+}
+
+td.list-group-link {
+  padding-left: 0.5rem;
+}
+
+/*****************************
+ * CV TOC styles
+ *****************************/
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
+}
+
+ul.timeline {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+ul.timeline li {
+  position: relative;
+  min-height: 2.2rem;
+  color: var(--global-text-color);
+  list-style-position: inside;
+}
+
+span.badge-toc {
+  color: var(--global-bg-color);
+  background-color: var(--global-theme-color);
+  border-radius: 0.125rem;
+  padding: 0.125rem 0.5rem 0.125rem 0.5rem;
+  font-weight: 700 !important;
+  display: inline-block;
+  inline-size: fit-content;
+}
+
+ul.timeline li::before {
+  content: "";
+  min-height: 2.5rem;
+  width: 1px;
+  background: var(--global-text-color);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 2px;
+  top: -0.5rem;
+}
+
+/*ul.timeline::before {
+     content: "●";
+     font-size: 1em;
+     display: inline-block;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     left: -2px;
+     top: 0.4rem;
+     color: var(--global-text-color);
+}
+ ul.timeline::after {
+     content: "●";
+     font-size: 1em;
+     display: inline-block;
+     margin: 0;
+     padding: 0;
+     position: relative;
+     left: -2px;
+     top: -1rem;
+     color: var(--global-text-color);
+}
+*/
+
+// Section headings (Bio, Education, Awards, …) in the theme accent.
+// The markup carries .font-weight-medium; three classes outrank that utility.
+.cv .card .card-title {
+  color: var(--global-theme-color);
+  font-weight: 700;
+}
+
+// Languages: two equal-width columns. table-layout: fixed keeps both cells at
+// 50% regardless of content length, so the second column does not drift.
+table.languages-table {
+  width: 100%;
+  table-layout: fixed;
+  background-color: transparent;
+
+  td {
+    width: 50%;
+    padding: 0.5rem 1rem 0.5rem 0;
+    vertical-align: top;
+  }
+}
+
+// Project logo, under the date badge. The Minerva mark is a fixed dark red
+// (#6f0a19), which measures 1.08:1 on the dark-theme card — invisible. The
+// light chip keeps it on a light ground in both themes without touching the
+// brand colours; in light theme the chip is near-invisible against the card.
+img.project-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0.45rem;
+  padding: 0.3rem 0.35rem;
+  border-radius: 4px;
+  background-color: #f7f4ef;
+}

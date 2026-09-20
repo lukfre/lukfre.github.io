@@ -1,0 +1,71 @@
+---
+---
+{% comment %}
+  Boilerplate header for a paper announcement, generated from the bib entry
+  named by the post's `bib_key`. Rendered via _includes/paper_intro.liquid,
+  which _layouts/paper.liquid calls. Everything here comes from the bib except
+  flag / city / city_url, which the post supplies in front matter.
+{% endcomment %}
+
+{%- assign venue_data = site.data.venues[entry.abbr] -%}
+{%- assign venue_name = page.venue | default: entry.abbr -%}
+{%- assign venue_url = page.venue_url | default: venue_data.url | default: entry.url -%}
+{%- assign city = page.city | default: entry.address -%}
+
+{%- comment -%} Co-authors = every author except the site owner {%- endcomment -%}
+{%- assign me = site.scholar.last_name | first | downcase | remove_accents -%}
+{%- assign coauthors = '' | split: ',' -%}
+{%- for a in entry.author_array -%}
+  {%- assign last_clean = a.last | downcase | remove_accents -%}
+  {%- unless last_clean == me -%}
+    {%- capture full %}{{ a.first }} {{ a.last }}{% endcapture -%}
+    {%- assign coauthors = coauthors | push: full -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- assign n_co = coauthors | size -%}
+
+<p>
+  Our paper,
+  <b>{{ entry.title }}</b>, has been accepted at
+  {% if venue_url -%}
+    <a href="{{ venue_url }}">{{ venue_name }}</a>
+  {%- else -%}
+    {{- venue_name -}}
+  {%- endif -%}
+  !
+</p>
+
+{% if n_co > 0 %}
+  <p>
+    👏 Huge thanks to my co-authors
+    {%- for c in coauthors -%}
+      {%- unless forloop.first -%}
+        {%- if forloop.last %} and {% else %}, {% endif -%}
+      {%- else -%}
+        {{ ' ' }}
+      {%- endunless -%}
+      {{- c -}}
+    {%- endfor -%}
+    .
+  </p>
+{% endif %}
+
+{% if entry.abstract %}
+  <details class="paper-abstract">
+    <summary>Abstract</summary>
+    <p>{{ entry.abstract }}</p>
+  </details>
+{% endif %}
+
+{% if city %}
+  <p>
+    See you in
+    {% if page.city_url -%}
+      <a href="{{ page.city_url }}">{{ city }}</a>
+    {%- else -%}
+      {{- city -}}
+    {%- endif -%}
+    !
+    {{ page.flag }}
+  </p>
+{% endif %}

@@ -1,0 +1,83 @@
+---
+---
+{% comment %}
+  Slim bibliography entry for the CV page.
+  Mirrors the row format used by _includes/cv/experience.liquid and the other
+  cv/*.liquid includes: a year badge in a col-2 date column on the left, title
+  and venue in a col-10 column on the right.
+{% endcomment %}
+
+<div class="row">
+  <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+    <table class="table-cv">
+      <tbody>
+        <tr>
+          <td>
+            {% comment %}
+              No venue colour here on purpose: on the CV these badges match the
+              accent-coloured date badges in the other cv/*.liquid sections. The
+              per-venue colours from _data/venues.yml are used on the
+              publications page only.
+            {% endcomment %}
+            <span class="badge font-weight-bold align-middle cv-venue-badge">
+              {%- if entry.abbr -%}
+                {{- entry.abbr | split: ' ' | first -}}
+              {%- else -%}
+                {{- entry.year -}}
+              {%- endif -%}
+            </span>
+          </td>
+        </tr>
+        {% if entry.address %}
+          <tr>
+            <td>
+              <p class="location">
+                {% if entry.address contains 'Remote' %}
+                  <i class="fa-solid fa-globe iconlocation"></i>
+                {% else %}
+                  <i class="fa-solid fa-location-dot iconlocation"></i>
+                {% endif %}
+                {{ entry.address }}
+              </p>
+            </td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+    {% assign pub_url = entry.url | default: entry.html %}
+    <h6 class="title font-weight-bold ml-1 ml-md-4">
+      {% if pub_url %}
+        <a href="{{ pub_url }}">{{ entry.title }}</a>
+      {% else %}
+        {{ entry.title }}
+      {% endif %}
+    </h6>
+
+    {% if entry.author_array %}
+      <p class="ml-1 ml-md-4 cv-authors">
+        {%- for author in entry.author_array -%}
+          {%- if site.scholar.last_name contains author.last -%}
+            <em>
+              {{- author.first }}
+              {{ author.last -}}
+            </em>
+          {%- else -%}
+            {{ author.first }}
+            {{ author.last }}
+          {%- endif -%}
+          {%- unless forloop.last %}, {% endunless -%}
+        {%- endfor -%}
+      </p>
+    {% endif %}
+
+    {% assign venue = entry.booktitle | default: entry.journal %}
+    {% if venue %}
+      <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
+        <em>{{ venue }}</em>
+      </h6>
+    {% endif %}
+  </div>
+</div>

@@ -1,15 +1,15 @@
-# Local Site Directories
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# Ruby Gems
+_site
 .bundle
+.DS_store
+.idea
+.jekyll-cache
+.jekyll-metadata
+.ruby-version
+.sass-cache
+.tweet-cache
+.venv
+assets/libs/
+assets/rendercv/rendercv_output/*.typ
 Gemfile.lock
-
-# Log Files
-*.log
-
-old/
-vendor/
+node_modules/
+vendor
