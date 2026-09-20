@@ -1,0 +1,279 @@
+/*******************************************************************************
+ * Themes
+ * Custom palette by Luca Gioffré
+ *
+ * Light: warm paper background + sage green accent
+ * Dark:  gruvbox warm browns + terracotta accent
+ ******************************************************************************/
+@use "variables" as v;
+@use "sass:color";
+
+// -----------------------------------------------------------------------------
+// Custom palette variables
+// (defined here for easy tweaking — used below in both themes)
+// -----------------------------------------------------------------------------
+
+// Light theme
+$light-bg: #f7f4ef; // warm paper
+$light-surface: #eeebe4; // slightly darker surface (cards, code bg)
+$light-text: #1c1916; // near-black, warm tint
+$light-text-secondary: #6e6860; // muted warm gray
+$light-accent: #086012;
+$light-accent-hover: #305a35; // deeper sage on hover (7.25:1)
+$light-border: #e2ddd6; // warm light border
+$light-footer-bg: #2a2724; // dark warm footer
+$light-footer-text: #b0a89e; // muted warm text on footer
+$light-footer-link: #f7f4ef; // light on dark footer
+$light-footer-hover: #8fb583; // light sage — readable on the dark footer strip
+
+// Dark theme (gruvbox base + terracotta accent)
+$dark-bg: #282828; // gruvbox dark hard
+$dark-surface: #32302f; // gruvbox dark medium (cards, code bg)
+$dark-text: #ebdbb2; // gruvbox light (primary text)
+$dark-text-secondary: #a89984; // gruvbox gray (secondary text)
+$dark-accent: #e18b56; // terracotta (5.64:1 on gruvbox)
+$dark-accent-hover: #e8a57d; // lighter terracotta on hover (7.10:1)
+$dark-border: #504945; // gruvbox dark border
+$dark-footer-bg: #1d1b19; // deeper dark for footer
+$dark-footer-text: #a89984; // gruvbox gray
+$dark-footer-link: #ebdbb2; // gruvbox light
+$dark-footer-hover: #e18b56; // terracotta on the deep-dark footer
+
+// Highlight color (used for e.g. selected bibliography entries)
+$light-highlight: #8b3a2a; // deep terracotta — stands out on light bg
+$dark-highlight: #e09060; // bright terracotta — stands out on dark bg
+
+// -----------------------------------------------------------------------------
+// Light theme (default)
+// -----------------------------------------------------------------------------
+
+:root {
+  color-scheme: light;
+
+  --global-bg-color: #{$light-bg};
+  --global-code-bg-color: #{$light-surface};
+  --global-text-color: #{$light-text};
+  --global-text-color-light: #{$light-text-secondary};
+  // Light paper ground, defined only here so it stays the same in both themes.
+  // Used behind transparent artwork (dark-ink logos) that would otherwise
+  // disappear against the dark background.
+  --global-paper-color: #{$light-bg};
+
+  --global-theme-color: #{$light-accent};
+  --global-hover-color: #{$light-accent-hover};
+  --global-hover-text-color: #{$light-bg};
+  --global-footer-bg-color: #{$light-footer-bg};
+  --global-footer-text-color: #{$light-footer-text};
+  --global-footer-link-color: #{$light-footer-link};
+  --global-footer-hover-color: #{$light-footer-hover};
+  --global-distill-app-color: #{$light-text-secondary};
+  --global-divider-color: #{$light-border};
+  --global-card-bg-color: #{$light-surface};
+  --global-highlight-color: #{$light-highlight};
+  --global-newsletter-bg-color: #{$light-bg};
+  --global-newsletter-text-color: #{$light-text};
+
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel($light-text, "red", $space: rgb)},
+    #{color.channel($light-text, "green", $space: rgb)},
+    #{color.channel($light-text, "blue", $space: rgb)},
+    0.4
+  );
+  --global-back-to-top-text-color: #{$light-bg};
+
+  // Callout blocks — kept readable, tuned for warm background
+  --global-tip-block: #4a9e74;
+  --global-tip-block-bg: #e4f4ec;
+  --global-tip-block-text: #1f4f38;
+  --global-tip-block-title: #357a58;
+
+  --global-warning-block: #b89000;
+  --global-warning-block-bg: #fdf4d0;
+  --global-warning-block-text: #5a4700;
+  --global-warning-block-title: #8a6e00;
+
+  --global-danger-block: #b83232;
+  --global-danger-block-bg: #fde8e8;
+  --global-danger-block-text: #5a1a1a;
+  --global-danger-block-title: #b83232;
+
+  // Dark mode toggle icon visibility
+  #light-toggle-system {
+    display: inline-block;
+  }
+  #light-toggle-dark {
+    display: none;
+  }
+  #light-toggle-light {
+    display: none;
+  }
+
+  .only-light {
+    display: block;
+  }
+  .only-dark {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+    bottom: v.$back-to-top-bottom;
+    right: v.$back-to-top-right;
+    height: v.$back-to-top-height;
+    width: v.$back-to-top-width;
+    z-index: v.$back-to-top-z-index;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Dark theme
+// -----------------------------------------------------------------------------
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --global-bg-color: #{$dark-bg};
+  --global-code-bg-color: #{$dark-surface};
+  --global-text-color: #{$dark-text};
+  --global-text-color-light: #{$dark-text-secondary};
+  --global-theme-color: #{$dark-accent};
+  --global-hover-color: #{$dark-accent-hover};
+  --global-hover-text-color: #{$dark-bg};
+  --global-footer-bg-color: #{$dark-footer-bg};
+  --global-footer-text-color: #{$dark-footer-text};
+  --global-footer-link-color: #{$dark-footer-link};
+  --global-footer-hover-color: #{$dark-footer-hover};
+  --global-distill-app-color: #{$dark-text-secondary};
+  --global-divider-color: #{$dark-border};
+  --global-card-bg-color: #{$dark-surface};
+  --global-highlight-color: #{$dark-highlight};
+  --global-newsletter-bg-color: #{$dark-surface};
+  --global-newsletter-text-color: #{$dark-text};
+
+  --global-back-to-top-bg-color: rgba(
+    #{color.channel($dark-text, "red", $space: rgb)},
+    #{color.channel($dark-text, "green", $space: rgb)},
+    #{color.channel($dark-text, "blue", $space: rgb)},
+    0.5
+  );
+  --global-back-to-top-text-color: #{$dark-bg};
+
+  // Callout blocks — inverted for dark background
+  --global-tip-block: #4a9e74;
+  --global-tip-block-bg: #1a3d2c;
+  --global-tip-block-text: #a8dfc0;
+  --global-tip-block-title: #d0f0e0;
+
+  --global-warning-block: #d4aa00;
+  --global-warning-block-bg: #3d3000;
+  --global-warning-block-text: #f0d878;
+  --global-warning-block-title: #fdf0b0;
+
+  --global-danger-block: #cc4444;
+  --global-danger-block-bg: #3d1010;
+  --global-danger-block-text: #f0b0b0;
+  --global-danger-block-title: #fdd8d8;
+
+  .only-light {
+    display: none;
+  }
+  .only-dark {
+    display: block;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Toggle icon state — dark setting explicitly chosen
+// -----------------------------------------------------------------------------
+
+html[data-theme-setting="dark"] {
+  #light-toggle-system {
+    display: none;
+  }
+  #light-toggle-dark {
+    display: inline-block;
+  }
+  #light-toggle-light {
+    display: none;
+  }
+
+  #back-to-top {
+    color: var(--global-back-to-top-text-color);
+    background: var(--global-back-to-top-bg-color);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Toggle icon state — light setting explicitly chosen
+// -----------------------------------------------------------------------------
+
+html[data-theme-setting="light"] {
+  #light-toggle-system {
+    display: none;
+  }
+  #light-toggle-dark {
+    display: none;
+  }
+  #light-toggle-light {
+    display: inline-block;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Dark mode toggle icon (half sun / half moon)
+// Unchanged from al-folio original — purely structural
+// -----------------------------------------------------------------------------
+
+.fa-half-sun-moon {
+  position: relative;
+  display: inline-block;
+
+  --fa-font: var(--fa-font-solid);
+  speak-as: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 1em;
+  height: 1em;
+}
+
+.fa-half-sun-moon::before,
+.fa-half-sun-moon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: -0.5px;
+  bottom: -0.5px;
+  text-align: center;
+  line-height: 1em;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  font: var(--fa-font);
+}
+
+// Left half: moon
+.fa-half-sun-moon::before {
+  content: "\f111";
+  color: var(--global-text-color);
+  clip-path: polygon(0 0, calc(50% - 0.5px) 0, calc(50% - 0.5px) 100%, 0 100%);
+}
+
+// Right half: sun
+.fa-half-sun-moon::after {
+  content: "\f185";
+  color: var(--global-text-color);
+  clip-path: polygon(calc(50% + 0.5px) 0, 100% 0, 100% 100%, calc(50% + 0.5px) 100%);
+  right: -1.5px;
+  transform: translateX(-1px);
+}
+
+#light-toggle:hover .fa-half-sun-moon::before {
+  color: var(--global-theme-color);
+}
+
+#light-toggle:hover .fa-half-sun-moon::after {
+  color: var(--global-theme-color);
+}

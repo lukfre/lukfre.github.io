@@ -1,0 +1,50 @@
+---
+layout: post
+---
+{% comment %}
+  Layout for a paper-announcement news post. Renders the repeated scaffolding
+  in a fixed order, then the post's own body, and _layouts/post.liquid appends
+  the Citations block from the same `bib_key`.
+
+  Front matter:
+    bib_key    required — entry in _bibliography/papers.bib; drives title,
+                 authors, abstract, venue and city
+    logo       image under assets/img/
+    logo_width optional, default 30%
+    shields    list of { label, message, color, url } — any number
+    flag       emoji shown after "See you in ..."
+    city       optional, defaults to the bib `address`
+    city_url   optional link for the city
+    venue      optional display name, defaults to the bib `abbr`
+    venue_url  optional, defaults to _data/venues.yml then the bib `url`
+{% endcomment %}
+
+<div class="paper-generated">
+  {% if page.logo %}
+    <center>
+      <div style="width: {{ page.logo_width | default: '30%' }}; overflow: hidden;">
+        {% include figure.liquid loading="eager" path=page.logo class="img-fluid rounded img-paper" %}
+      </div>
+    </center>
+  {% endif %}
+
+  {% if page.shields %}
+    <p class="text-center paper-shields">
+      {%- for s in page.shields -%}
+        {%- comment -%} spaces must be encoded or shields.io 404s {%- endcomment -%}
+        {%- capture badge -%}
+          {{ s.label | replace: ' ', '%20' }}-{{ s.message | replace: ' ', '%20' }}-{{ s.color | default: 'blue' }}
+        {%- endcapture -%}
+        <a href="{{ s.url }}">
+          <img src="https://img.shields.io/badge/{{ badge | strip }}" alt="{{ s.label }}: {{ s.message }}">
+        </a>
+      {%- endfor -%}
+    </p>
+  {% endif %}
+
+  {% if page.bib_key %}
+    {% include paper_intro.liquid key=page.bib_key %}
+  {% endif %}
+</div>
+
+{{ content }}

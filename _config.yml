@@ -1,124 +1,711 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
+# -----------------------------------------------------------------------------
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Luca Gioffré
-email:
-description: >- # this means to ignore newlines until new field
-  Hi, I'm Luca Gioffré, a PhD student at SapienzaNLP Lab in Rome. I work on the integration of LMs and KGs, with a focus on inerpretability and on the narrative domain.
-github_username: lukfre
-# Available skins:
-# default air contrast dark dirt mint sunrise aqua neon plum
-minimal_mistakes_skin: dirt
-search: true
+# -----------------------------------------------------------------------------
 
-# Build settings
+title: blank # the website title (if blank, full name will be used instead)
+first_name: Luca
+middle_name:
+last_name: Gioffré
+contact_note: > # the ">" symbol means to ignore newlines until new field — keeps the formatting of the note intact
+  "Best reached via email — I reply within a few days."
+description: > # description used in meta tags / SEO (Search Engine Optimization)
+  Personal website of Luca Gioffré. 
+  PhD Student in NLP at Sapienza University of Rome. 
+  Research interests: language models, knowledge graphs, interpretability, narrative understanding.
+footer_text:
+  ""
+  # Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  # Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+keywords: LLMs, narratives, benchmarks, evaluation # TODO: add your own keywords
+lang: en
+icon: 🧑‍💻 # TODO: change to your preferred emoji or provide an image path in /assets/img/
+
+url: https://lukfre.github.io
+baseurl: ""
+last_updated: false # set to true to show "last updated" in the footer
+impressum_path: # set if you need an impressum page (EU GDPR)
+back_to_top: true
+
+# -----------------------------------------------------------------------------
+# Theme
+# -----------------------------------------------------------------------------
+
+# NOTE: the repo_theme and repo_trophies blocks below are only used by the
+# /repositories page. Since you're not using that page, these are commented out.
+# repo_theme_light: default
+# repo_theme_dark: dark
+# repo_trophies:
+#   enabled: true
+#   theme_light: flat
+#   theme_dark: gitdimmed
+
+# NOTE: same as above — external_services only powers the /repositories page.
+# external_services:
+#   github_readme_stats_url: https://github-readme-stats.vercel.app
+#   github_profile_trophy_url: https://github-profile-trophy.vercel.app
+
+# -----------------------------------------------------------------------------
+# RSS Feed
+# -----------------------------------------------------------------------------
+# Will use title and url fields.
+# See https://github.com/jekyll/jekyll-feed for customization.
+# No changes needed here — RSS is generated automatically.
+
+# -----------------------------------------------------------------------------
+# Layout
+# -----------------------------------------------------------------------------
+
+navbar_fixed: true
+footer_fixed: true
+search_enabled: true
+socials_in_search: true
+posts_in_search: true
+bib_search: true
+
+# Dimensions
+# NOTE: reduced from 930px for better reading comfort (~65-75 chars per line).
+# Adjust to taste: 750px is a good starting point for typography-first design.
+max_width: 930px
+
+# -----------------------------------------------------------------------------
+# Open Graph & Schema.org
+# -----------------------------------------------------------------------------
+# Enables rich previews when sharing your site on social media.
+serve_og_meta: true # recommended to enable
+serve_schema_org: true # recommended to enable
+og_image: /assets/img/og-image.png # regenerate with: python3 bin/make_og_image.py
+
+# -----------------------------------------------------------------------------
+# Analytics and search engine verification
+# -----------------------------------------------------------------------------
+
+# NOTE: Google/Cronitor/Pirsch/Openpanel tracking all left disabled.
+# Goatcounter (https://www.goatcounter.com) is wired up instead: free for
+# personal use, cookieless, no fingerprinting, so no consent banner is needed.
+# Put ONLY the site code here — for https://lukfre.goatcounter.com that is
+# "lukfre". Leave blank to disable. Rendered from _includes/scripts.liquid.
+# (Do not use _includes/head/custom.html — that file is never included.)
+goatcounter_code: lukfre # -> https://lukfre.goatcounter.com
+
+google_analytics: # leave blank — disabled
+cronitor_analytics: # leave blank — disabled
+pirsch_analytics: # leave blank — disabled
+openpanel_analytics: # leave blank — disabled
+
+google_site_verification: 6WJUpXtGsuU8ebuYSmtaJpvrz9Wx6Ku64lVWYf0EyGU
+bing_site_verification: # leave blank unless needed
+
+# -----------------------------------------------------------------------------
+# Blog
+# -----------------------------------------------------------------------------
+
+blog_name: Luca Gioffré's Blog # TODO: customize — shown on your blog page header
+blog_description: # TODO: add a short description of your blog
+permalink: /blog/:year/:title/
+lsi: false # related posts via latent semantic indexing — off, uses related_blog_posts instead
+
+# Pagination
+pagination:
+  enabled: true
+
+related_blog_posts:
+  enabled: true
+  max_related: 5
+
+# Comments — Giscus (recommended, GitHub-based, no tracking)
+# TODO: follow https://giscus.app/ to get your repo_id and category_id, then fill in below.
+giscus:
+  repo: # <your-github-username>/<your-github-repo>
+  repo_id: # from giscus.app
+  category: Comments
+  category_id: # from giscus.app
+  mapping: title
+  strict: 1
+  reactions_enabled: 1
+  input_position: bottom
+  dark_theme: dark
+  light_theme: light
+  emit_metadata: 0
+  lang: en
+
+# NOTE: Disqus is deprecated and was pointing to al-folio's own account.
+# Cleared to avoid accidentally loading someone else's comment section.
+# disqus_shortname: # leave blank to disable
+
+# NOTE: external_sources was pulling posts from Medium/@al-folio and a Google
+# blog post — definitely not what you want. Commented out entirely.
+# external_sources:
+#   - name: medium.com
+#     rss_url: https://medium.com/@al-folio/feed
+#     categories: [external-posts]
+#     tags: [medium]
+#   - name: Google Blog
+#     posts:
+#       - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
+#         published_date: 2024-05-14
+#     categories: [external-posts]
+#     tags: [google]
+
+# TODO: update display_tags to match the tags you'll actually use on your posts.
+# These appear as filter buttons on the blog front page.
+display_tags: ["code", "research", "misc"] # example — replace with your own
+display_categories: [] # leave empty unless you use categories
+
+# -----------------------------------------------------------------------------
+# Newsletter
+# -----------------------------------------------------------------------------
+
+newsletter:
+  enabled: false
+  # endpoint: # uncomment and fill in if you ever add a newsletter via loops.so
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+# jekyll-feed defaults to _posts, which is empty here — news is the real feed.
+feed:
+  path: /posts.xml # the (unused) _posts feed moves aside
+  collections:
+    news:
+      path: /feed.xml # news becomes the feed the RSS icon points at
+
+collections:
+  news:
+    defaults:
+      layout: post
+    output: true
+  # projects:
+  #   output: false
+  # NOTE: teachings removed — uncomment below if you ever add a teaching section
+  # teachings:
+  #   output: true
+  books:
+    output: false
+
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
+
+# Markdown and syntax highlight
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
 
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# Includes & excludes
+include: ["_pages", "_scripts"]
+exclude:
+  - bin/
+  - CONTRIBUTING.md
+  - CUSTOMIZE.md
+  - Dockerfile
+  - docker-compose.yml
+  - docker-compose-slim.yml
+  - FAQ.md
+  - Gemfile
+  - Gemfile.lock
+  - INSTALL.md
+  - LICENSE
+  - lighthouse_results/
+  - package.json
+  - package-lock.json
+  - _pages/about_einstein.md
+  - purgecss.config.js
+  - README.md
+  - readme_preview/
+  - vendor
+keep_files:
+  - CNAME
+  - .nojekyll
 
-search: true
-
-include:
-  - _pages
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+# Plug-ins
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
+  - jekyll-3rd-party-libraries
+  - jekyll-archives-v2
+  - jekyll-cache-bust
+  - jekyll-email-protect
   - jekyll-feed
+  - jekyll-get-json
+  # - jekyll-imagemagick
+  - jekyll-link-attributes
+  - jekyll-minifier
+  - jekyll-paginate-v2
+  - jekyll-regex-replace
+  - jekyll/scholar
+  - jekyll-sitemap
+  - jekyll-socials
+  - jekyll-tabs
+  - jekyll-terser
+  - jekyll-toc
+  # NOTE: jekyll-jupyter-notebook removed — re-add if you ever embed notebooks
+  # - jekyll-jupyter-notebook
+  # NOTE: jekyll-twitter-plugin removed — re-add if you embed tweets in posts
+  # - jekyll-twitter-plugin
+  # :emoji: shortcode support in posts
   - jemoji
-  - jekyll-include-cache
 
-author:
-  name   : "Luca Gioffré"
-  avatar : "/assets/images/bio-photo.png"
-  bio    : "*PhD Student in NLP at Sapienza, University of Rome* :it:"
-  links:
-    - label: "Scholar"
-      icon: "fab fa-fw fa-google-scholar"
-      url: "https://scholar.google.com/citations?user=jxAvKZ4AAAAJ&hl=it"
-    - label: "Semantic Scholar"
-      icon: "fas fa-solid fa-book"
-      url: "https://www.semanticscholar.org/author/Luca-Gioffre/2350859151"
-    - label: "ResearchGate"
-      icon: "fa-brands fa-researchgate"
-      url: "https://www.researchgate.net/profile/Luca-Gioffre"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/luca-gioffre/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/lukfre"
-# footer:
-#   links:
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       url: "https://twitter.com/"
-#     - label: "GitHub"
-#       icon: "fab fa-fw fa-github"
-#       url: "https://github.com/"
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       url: "https://instagram.com/"
-
+# Sitemap settings
 defaults:
-  # _posts
   - scope:
-      path: ""
-      type: posts
+      path: "assets"
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      #related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
+      sitemap: false
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+sass:
+  style: compressed
 
-google_fonts:
-  - name: "Merriweather"
-    weights: "300,400,700,900"
+# -----------------------------------------------------------------------------
+# Jekyll Minifier
+# -----------------------------------------------------------------------------
+
+jekyll-minifier:
+  compress_javascript: false # terser handles JS minification below
+  exclude: ["robots.txt", "assets/js/search/*.js"]
+
+# -----------------------------------------------------------------------------
+# Terser
+# -----------------------------------------------------------------------------
+
+terser:
+  compress: false
+  #    drop_console: true
+  mangle: false
+# -----------------------------------------------------------------------------
+# Jekyll Archives
+# -----------------------------------------------------------------------------
+
+jekyll-archives:
+  posts:
+    enabled: [year, tags, categories]
+    permalinks:
+      year: "/blog/:year/"
+      tags: "/blog/:type/:name/"
+      categories: "/blog/:type/:name/"
+  # NOTE: books archives removed — uncomment if you re-enable the books collection
+  # books:
+  #   enabled: [year, tags, categories]
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
+scholar:
+  last_name: [Gioffré]
+  first_name: [Luca, L.]
+
+  style: apa
+  locale: en
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_link: Details
+
+  query: "@*"
+  group_by: year
+  group_order: descending
+
+# Publication badges — disable any you don't need
+enable_publication_badges:
+  altmetric: false
+  dimensions: false
+  google_scholar: true
+  inspirehep: false
+
+# Bibtex keywords filtered from public output
+filtered_bibtex_keywords:
+  [
+    abbr,
+    abstract,
+    additional_info,
+    altmetric,
+    annotation,
+    arxiv,
+    award,
+    award_name,
+    bibtex_show,
+    blog,
+    code,
+    dimensions,
+    eprint,
+    google_scholar_id,
+    hal,
+    html,
+    inspirehep_id,
+    pdf,
+    pmid,
+    poster,
+    preview,
+    selected,
+    slides,
+    supp,
+    video,
+    website,
+  ]
+
+max_author_limit: 3
+more_authors_animation_delay: 10
+
+enable_publication_thumbnails: true
+
+# -----------------------------------------------------------------------------
+# Jekyll Link Attributes
+# -----------------------------------------------------------------------------
+
+external_links:
+  enabled: true
+  rel: external nofollow noopener
+  target: _blank
+  exclude:
+
+# -----------------------------------------------------------------------------
+# Responsive WebP Images
+# -----------------------------------------------------------------------------
+
+# NOTE: requires imagemagick installed locally. Run `convert -version` to check.
+imagemagick:
+  enabled: false # true
+  widths:
+    - 480
+    - 800
+    - 1400
+  input_directories:
+    - assets/img/
+  input_formats:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".tiff"
+    - ".gif"
+  output_formats:
+    webp: "-auto-orient -quality 85"
+
+lazy_loading_images: true
+
+# -----------------------------------------------------------------------------
+# Optional Features
+# -----------------------------------------------------------------------------
+
+enable_google_analytics: false # disabled — use Goatcounter instead (see Analytics section above)
+enable_cronitor_analytics: false
+enable_pirsch_analytics: false
+enable_openpanel_analytics: false
+enable_google_verification: true # google_site_verification is set — this emits the tag
+enable_bing_verification: false
+enable_cookie_consent: false # re-enable if you add any tracking
+
+enable_masonry: true # nice card layout for projects
+enable_math: false # disabled — you don't use LaTeX
+enable_tooltips: false # auto-generates tooltip links on section headings
+enable_darkmode: true # dark mode toggle — keep
+enable_navbar_social: false # shows social icons in navbar — off keeps it clean
+enable_project_categories: true # lets you filter projects by category
+enable_medium_zoom: true # click-to-zoom on images
+enable_progressbar: true # scroll progress bar at top of page
+enable_video_embedding: false # opens video links in new tab rather than embedding
+
+# -----------------------------------------------------------------------------
+# Library versions
+# -----------------------------------------------------------------------------
+
+third_party_libraries:
+  download: false
+
+  bootstrap-table:
+    integrity:
+      css: "sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c="
+      js: "sha256-4rppopQE9POKfukn2kEvhJ9Um25Cf6+IDVkARD0xh78="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/bootstrap-table@{{version}}/dist/bootstrap-table.min.css"
+      js: "https://cdn.jsdelivr.net/npm/bootstrap-table@{{version}}/dist/bootstrap-table.min.js"
+    version: "1.22.4"
+
+  # NOTE: chartjs, d3, echarts, plotly, vega, vega-embed, vega-lite commented out.
+  # Re-enable if you use data visualizations in posts.
+  # chartjs:
+  #   integrity:
+  #     js: "sha256-0q+JdOlScWOHcunpUk21uab1jW7C1deBQARHtKMcaB4="
+  #   url:
+  #     js: "https://cdn.jsdelivr.net/npm/chart.js@{{version}}/dist/chart.umd.min.js"
+  #   version: "4.4.1"
+  # d3:
+  #   integrity:
+  #     js: "sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw="
+  #   url:
+  #     js: "https://cdn.jsdelivr.net/npm/d3@{{version}}/dist/d3.min.js"
+  #   version: "7.8.5"
+  # echarts:
+  #   integrity:
+  #     js:
+  #       library: "sha256-QvgynZibb2U53SsVu98NggJXYqwRL7tg3FeyfXvPOUY="
+  #       dark_theme: "sha256-sm6Ui9w41++ZCWmIWDLC18a6ki72FQpWDiYTDxEPXwU="
+  #   url:
+  #     js:
+  #       library: "https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/echarts.min.js"
+  #       dark_theme: "https://cdn.jsdelivr.net/npm/echarts@{{version}}/theme/dark-fresh-cut.js"
+  #   version: "5.5.0"
+  # plotly:
+  #   integrity:
+  #     js: "sha256-oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q="
+  #   url:
+  #     js: "https://cdn.jsdelivr.net/npm/plotly.js@{{version}}/dist/plotly.min.js"
+  #   version: "3.0.1"
+  # vega:
+  #   integrity:
+  #     js: "sha256-Yot/cfgMMMpFwkp/5azR20Tfkt24PFqQ6IQS+80HIZs="
+  #     js_map: "sha256-z0x9ICA65dPkZ0JVa9wTImfF6n7AJsKc6WlFE96/wNA="
+  #   url:
+  #     js: "https://cdn.jsdelivr.net/npm/vega@{{version}}/build/vega.min.js"
+  #     js_map: "https://cdn.jsdelivr.net/npm/vega@{{version}}/build/vega.min.js.map"
+  #   version: "5.27.0"
+  # vega-embed:
+  #   integrity:
+  #     js: "sha256-FPCJ9JYCC9AZSpvC/t/wHBX7ybueZhIqOMjpWqfl3DU="
+  #     js_map: "sha256-VBbfSEFYSMdX/rTdGrONEHNP6BprCB7H/LpMMNt/cPA="
+  #   url:
+  #     js: "https://cdn.jsdelivr.net/npm/vega-embed@{{version}}/build/vega-embed.min.js"
+  #     js_map: "https://cdn.jsdelivr.net/npm/vega-embed@{{version}}/build/vega-embed.min.js.map"
+  #   version: "6.24.0"
+  # vega-lite:
+  #   integrity:
+  #     js: "sha256-TvBvIS5jUN4BSy009usRjNzjI1qRrHPYv7xVLJyjUyw="
+  #     js_map: "sha256-l2I4D5JC23Ulsu6e3sKVe5AJ+r+DFkzkKnZS8nUGz28="
+  #   url:
+  #     js: "https://cdn.jsdelivr.net/npm/vega-lite@{{version}}/build/vega-lite.min.js"
+  #     js_map: "https://cdn.jsdelivr.net/npm/vega-lite@{{version}}/build/vega-lite.min.js.map"
+  #   version: "5.16.3"
+
+  # NOTE: diff2html commented out — only needed for code diff display in posts
+  # diff2html:
+  #   integrity:
+  #     css: "sha256-IMBK4VNZp0ivwefSn51bswdsrhk0HoMTLc2GqFHFBXg="
+  #     js: "sha256-eU2TVHX633T1o/bTQp6iIJByYJEtZThhF9bKz/DcbbY="
+  #   url:
+  #     css: "https://cdn.jsdelivr.net/npm/diff2html@{{version}}/bundles/css/diff2html.min.css"
+  #     js: "https://cdn.jsdelivr.net/npm/diff2html@{{version}}/bundles/js/diff2html-ui.min.js"
+  #   version: "3.4.47"
+
+  google_fonts:
+    url:
+      # TODO: consider replacing with a font stack you prefer.
+      # Current: Roboto + Roboto Slab. Alternatives: Inter, Source Serif, etc.
+      # fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+
+  highlightjs:
+    integrity:
+      css:
+        light: "sha256-Oppd74ucMR5a5Dq96FxjEzGF7tTw2fZ/6ksAqDCM8GY="
+        dark: "sha256-nyCNAiECsdDHrr/s2OQsp5l9XeY2ZJ0rMepjCT2AkBk="
+    url:
+      css:
+        light: "https://cdn.jsdelivr.net/npm/highlight.js@{{version}}/styles/github.min.css"
+        dark: "https://cdn.jsdelivr.net/npm/highlight.js@{{version}}/styles/github-dark.min.css"
+    version: "11.9.0"
+
+  imagesloaded:
+    integrity:
+      js: "sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
+    url:
+      js: https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js
+    version: "5.0.0"
+
+  img-comparison-slider:
+    integrity:
+      css: "sha256-3qTIuuUWIFnnU3LpQMjqiXc0p09rvd0dmj+WkpQXSR8="
+      js: "sha256-EXHg3x1K4oIWdyohPeKX2ZS++Wxt/FRPH7Nl01nat1o="
+      map: "sha256-3wfqS2WU5kGA/ePcgFzJXl5oSN1QsgZI4/edprTgX8w="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/styles.min.css"
+      js: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/index.min.js"
+      map: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/index.js.map"
+    version: "8.0.6"
+
+  jquery:
+    integrity:
+      js: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+    version: "3.6.0"
+
+  # NOTE: leaflet (maps) commented out — re-enable if you embed maps in posts/pages
+  # leaflet:
+  #   integrity:
+  #     css: "sha256-q9ba7o845pMPFU+zcAll8rv+gC+fSovKsOoNQ6cynuQ="
+  #     js: "sha256-MgH13bFTTNqsnuEoqNPBLDaqxjGH+lCpqrukmXc8Ppg="
+  #     js_map: "sha256-YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M="
+  #   local:
+  #     images: "images/"
+  #   url:
+  #     css: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.min.css"
+  #     images: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/images/"
+  #     js: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.min.js"
+  #     js_map: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.js.map"
+  #   version: "1.9.4"
+
+  lightbox2:
+    integrity:
+      css: "sha256-uypRbsAiJcFInM/ndyI/JHpzNe6DtUNXaWEUWEPfMGo="
+      js: "sha256-A6jI5V9s1JznkWwsBaRK8kSeXLgIqQfxfnvdDOZEURY="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/lightbox2@{{version}}/dist/css/lightbox.min.css"
+      js: "https://cdn.jsdelivr.net/npm/lightbox2@{{version}}/dist/js/lightbox.min.js"
+    version: "2.11.5"
+
+  # NOTE: mathjax commented out — math rendering disabled (enable_math: false)
+  # mathjax:
+  #   integrity:
+  #     js: "sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+  #   local:
+  #     fonts: "output/chtml/fonts/woff-v2/"
+  #   url:
+  #     fonts: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/output/chtml/fonts/woff-v2/"
+  #     js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+  #   version: "3.2.2"
+
+  masonry:
+    integrity:
+      js: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
+    version: "4.2.2"
+
+  mdb:
+    inte.grity:
+      css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
+      css_map: "sha256-iYYMNfsJdVZjvsebJulg09miBXM4/GMTJgv1u5EZFFM="
+      js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
+      js_map: "sha256-UPgyn4YNsT0khkBK5553QwhnlbTlU0aa+igyc6qP1bE="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css"
+      css_map: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/css/mdb.min.css.map"
+      js: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
+      js_map: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js.map"
+    version: "4.20.0"
+
+  medium_zoom:
+    integrity:
+      js: "sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+    version: "1.1.0"
+
+  mermaid:
+    integrity:
+      js: "sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/mermaid@{{version}}/dist/mermaid.min.js"
+    version: "10.7.0"
+
+  photoswipe:
+    integrity:
+      js: "sha256-VCBpdxvrNNxGHNuTdNqK9kPFkev2XY7DYzHdmgaB69Q="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe.min.css"
+      js: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe.esm.min.js"
+    version: "5.4.4"
+
+  photoswipe-lightbox:
+    integrity:
+      js: "sha256-uCw4VgT5DMdwgtjhvU9e98nT2mLZXcw/8WkaTrDd3RI="
+    url:
+      js: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe-lightbox.esm.min.js"
+    version: "5.4.4"
+
+  polyfill:
+    url:
+      js: "https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
+    version: "3"
+
+  # NOTE: pseudocode commented out — algorithm display not needed
+  # pseudocode:
+  #   integrity:
+  #     css: "sha256-VwMV//xgBPDyRFVSOshhRhzJRDyBmIACniLPpeXNUdc="
+  #     js: "sha256-aVkDxqyzrB+ExUsOY9PdyelkDhn/DfrjWu08aVpqNlo="
+  #   url:
+  #     css: "https://cdn.jsdelivr.net/npm/pseudocode@{{version}}/build/pseudocode.min.css"
+  #     js: "https://cdn.jsdelivr.net/npm/pseudocode@{{version}}/build/pseudocode.min.js"
+  #   version: "2.4.1"
+
+  spotlight:
+    integrity:
+      css: "sha256-Dsvkx8BU8ntk9Iv+4sCkgHRynYSQQFP6gJfBN5STFLY="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/spotlight.js@{{version}}/dist/css/spotlight.min.css"
+      js: "https://cdn.jsdelivr.net/npm/spotlight.js@{{version}}/dist/spotlight.bundle.min.js"
+    version: "0.7.8"
+
+  # NOTE: swiper (carousel) commented out — re-enable if you use image carousels
+  # swiper:
+  #   integrity:
+  #     css: "sha256-yUoNxsvX+Vo8Trj3lZ/Y5ZBf8HlBFsB6Xwm7rH75/9E="
+  #     js: "sha256-BPrwikijIybg9OQC5SYFFqhBjERYOn97tCureFgYH1E="
+  #     map: "sha256-lbF5CsospW93otqvWOIbbhj80CjazrZXvamD7nC7TBI="
+  #   url:
+  #     css: "https://cdn.jsdelivr.net/npm/swiper@{{version}}/swiper-bundle.min.css"
+  #     js: "https://cdn.jsdelivr.net/npm/swiper@{{version}}/swiper-element-bundle.min.js"
+  #     map: "https://cdn.jsdelivr.net/npm/swiper@{{version}}/swiper-element-bundle.min.js.map"
+  #   version: "11.0.5"
+  # swiper-map:
+  #   integrity:
+  #     js: "sha256-hlZaH8ySXX97bZaetnrtYlKuhx3oEXFz/s2IXchu6vk="
+  #   url:
+  #     js: "https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-element-bundle.min.js.map"
+  #   version: "11.0.5"
+
+  vanilla-cookieconsent:
+    integrity:
+      css: "sha256-ygRrixsQlBByBZiOcJamh7JByO9fP+/l5UPtKNJmRsE="
+      js: "sha256-vG4vLmOB/AJbJ6awr7Wg4fxonG+fxAp4cIrbIFTvRXU="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.css"
+      js: "https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.umd.js"
+    version: "3.1.0"
+
+  venobox:
+    integrity:
+      css: "sha256-ohJEB0/WsBOdBD+gQO/MGfyJSbTUI8OOLbQGdkxD6Cg="
+      js: "sha256-LsGXHsHMMmTcz3KqTaWvLv6ome+7pRiic2LPnzTfiSo="
+    url:
+      css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
+      js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
+    version: "2.1.8"
+
+# -----------------------------------------------------------------------------
+# Get external JSON data
+# -----------------------------------------------------------------------------
+
+# NOTE: this powers the CV page — keep it. Make sure assets/json/resume.json
+# exists and is filled with your data (follows the JSON Resume schema).
+jekyll_get_json:
+  - data: resume
+    json: assets/json/resume.json
+
+# CV sections to display — comment out any you don't want shown on the CV page
+jsonresume:
+  - basics
+  - work
+  - education
+  - publications
+  - projects
+  # - volunteer   # commented out — uncomment if relevant
+  - awards
+  # - certificates  # commented out — uncomment if relevant
+  - skills
+  - languages
+  - interests
+  # - references  # commented out — usually not shown on public sites

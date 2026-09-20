@@ -1,0 +1,97 @@
+{% comment %}
+  Unified projects entry renderer for both formats.
+  Two-column row matching cv/experience.liquid: date badge in a col-2 date
+  column, content in a col-10 column. Every project carries a date, so there is
+  no dateless fallback.
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      <div class="row">
+        {% capture start_date %}
+          {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
+        {% endcapture %}
+        {% capture end_date %}
+          {% if entry.end_date %}{{ entry.end_date }}{% elsif entry.endDate %}{{ entry.endDate }}{% endif %}
+        {% endcapture %}
+
+        {% comment %} capture keeps the surrounding newlines — strip before testing {% endcomment %}
+        {% assign start_date = start_date | strip %}
+        {% assign end_date = end_date | strip %}
+        {% assign startDate = start_date | split: '-' | first %}
+
+        {% if end_date != '' %}
+          {% assign endDate = end_date | split: '-' | first %}
+          {% assign date = startDate | append: ' - ' | append: endDate %}
+        {% else %}
+          {% assign date = 'since ' | append: startDate %}
+        {% endif %}
+
+        <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+          <table class="table-cv">
+            <tbody>
+              {% if entry.logo %}
+                <tr>
+                  <td>
+                    <img
+                      class="project-logo"
+                      src="{{ entry.logo | prepend: '/assets/img/' | relative_url }}"
+                      alt="{{ entry.name }} logo"
+                      loading="lazy"
+                    >
+                  </td>
+                </tr>
+              {% endif %}
+              <tr>
+                <td>
+                  <span class="badge font-weight-bold danger-color-dark align-middle" style="min-width: 75px">
+                    {{- date -}}
+                  </span>
+                </td>
+              </tr>
+              {% if entry.location %}
+                <tr>
+                  <td>
+                    <p class="location">
+                      {% if entry.location contains 'Remote' %}
+                        <i class="fa-solid fa-globe iconlocation"></i>
+                      {% else %}
+                        <i class="fa-solid fa-location-dot iconlocation"></i>
+                      {% endif %}
+                      {{ entry.location }}
+                    </p>
+                  </td>
+                </tr>
+              {% endif %}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">
+          {% if entry.url %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">
+              <a href="{{ entry.url }}" target="_blank">{{ entry.name }}</a>
+            </h6>
+          {% else %}
+            <h6 class="title font-weight-bold ml-1 ml-md-4">{{ entry.name }}</h6>
+          {% endif %}
+
+          {% if entry.summary %}
+            <p class="ml-1 ml-md-4">{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+          {% endif %}
+
+          {% if entry.highlights %}
+            <ul class="items ml-1 ml-md-4">
+              {% for item in entry.highlights %}
+                <li>
+                  <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

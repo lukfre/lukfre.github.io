@@ -1,0 +1,5 @@
+{% comment %}
+  Renders the generated header for one bibliography entry.
+  Usage: {% include paper_intro.liquid key="molfese-etal-2025-right" %}
+{% endcomment %}
+{% bibliography --query @*[key={{ include.key }}] --template paper_intro --group_by none %}

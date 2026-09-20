@@ -1,0 +1,5 @@
+{% comment %}
+  Renders the citation block for one bibliography entry.
+  Usage: {% include paper_citation.liquid key="bonomo-etal-2025-literaryqa" %}
+{% endcomment %}
+{% bibliography --query @*[key={{ include.key }}] --template cite_block --group_by none %}

@@ -1,0 +1,244 @@
+/*******************************************************************************
+ * Publication and bibliography styles
+ ******************************************************************************/
+
+@use "variables" as v;
+
+.publications {
+  margin-top: 2rem;
+
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2.bibliography {
+    color: var(--global-theme-color);
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    text-align: right;
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 1rem;
+
+      .preview {
+        display: inline-block;
+      }
+
+      .abbr {
+        margin-bottom: 0.5rem;
+
+        abbr {
+          display: inline-block;
+          background-color: var(--global-theme-color);
+          margin-bottom: 0.5rem;
+          color: var(--global-card-bg-color) !important;
+
+          a {
+            // Venue colours from _data/venues.yml are dark, so white reads on
+            // them in both themes. (The CV badge uses the accent instead, and
+            // pairs with --global-card-bg-color — see .cv-venue-badge.)
+            color: white;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .award {
+          color: var(--global-theme-color) !important;
+          border: 1px solid var(--global-theme-color);
+        }
+      }
+
+      .title {
+        font-weight: bolder;
+      }
+
+      .author {
+        a {
+          border-bottom: 1px dashed var(--global-theme-color);
+
+          &:hover {
+            border-bottom-style: solid;
+            text-decoration: none;
+          }
+        }
+
+        > em {
+          border-bottom: 1px solid;
+          font-style: normal;
+        }
+
+        > span.more-authors {
+          color: var(--global-text-color-light);
+          border-bottom: 1px dashed var(--global-text-color-light);
+          cursor: pointer;
+
+          &:hover {
+            color: var(--global-text-color);
+            border-bottom: 1px dashed var(--global-text-color);
+          }
+        }
+      }
+
+      .links {
+        a.btn {
+          color: var(--global-text-color);
+          border: 1px solid var(--global-text-color);
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          margin-left: 0;
+
+          &:hover {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+          }
+        }
+        a.award.btn {
+          border-color: var(--global-highlight-color);
+        }
+      }
+
+      .badges {
+        padding-bottom: 0.5rem;
+        span {
+          display: inline-block;
+          color: v.$black-color;
+          height: 100%;
+          padding-right: 0.5rem;
+          vertical-align: middle;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .hidden {
+        font-size: 0.875rem;
+        max-height: 0px;
+        overflow: hidden;
+        text-align: justify;
+        transition-property: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+        transition: all 0.15s ease;
+
+        p {
+          line-height: 1.4em;
+          margin: 10px;
+        }
+
+        pre {
+          font-size: 1em;
+          line-height: 1.4em;
+          padding: 10px;
+        }
+      }
+
+      .hidden.open {
+        max-height: 100em;
+        transition-property: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+        transition: all 0.15s ease;
+      }
+
+      div.abstract.hidden {
+        border: dashed 1px var(--global-bg-color);
+      }
+
+      div.abstract.hidden.open {
+        border-color: var(--global-text-color);
+      }
+    }
+    div.award.hidden {
+      border: dashed 1px var(--global-bg-color);
+    }
+    div.award.hidden.open {
+      border-color: var(--global-highlight-color);
+    }
+  }
+}
+
+.citation,
+.citation-number {
+  color: var(--global-theme-color);
+}
+
+// CV page: bibliography rendered with _layouts/bib_cv.liquid. jekyll-scholar
+// controls the <ol>/<li> wrapper, so we can't add Bootstrap's list-group
+// classes to it — these rules reproduce .list-group-flush / .list-group-item
+// so the rows line up with the other cv/*.liquid sections.
+
+.publications.cv-slim {
+  margin-top: 0;
+
+  ol.bibliography {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 0;
+      padding: 0.75rem 1.25rem;
+      border-top: 1px solid var(--global-divider-color);
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
+
+  // Venue badge: coloured from _data/venues.yml, accent when the venue has no
+  // colour. Deliberately not .danger-color-dark — that sets #c00 !important,
+  // which an inline background-color cannot override.
+  // Matches the date badges in the other cv/*.liquid sections exactly: those
+  // carry an inline min-width:75px on a shrink-to-fit table, so every label
+  // shorter than 75px renders at exactly 75px and the column lines up.
+  .cv-venue-badge {
+    min-width: 75px;
+
+    // !important is required: MDB ships .badge { color: #fff !important }, which
+    // outranks a plain declaration however specific. This mirrors how the other
+    // CV badges win, at .cv .card .list-group-item .badge in _components.scss.
+    background-color: var(--global-theme-color) !important;
+    color: var(--global-card-bg-color) !important;
+    white-space: nowrap;
+  }
+
+  .cv-authors {
+    margin-bottom: 0.2rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  h6.title {
+    margin-bottom: 0.2rem;
+  }
+}
