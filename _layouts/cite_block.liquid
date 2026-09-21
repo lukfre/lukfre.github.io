@@ -66,15 +66,15 @@
   <h5>Plain text</h5>
   {% highlight text -%}
   {{- plain_text | strip -}}
-  {%- endhighlight %}
+{%- endhighlight %}
 
-  <h5>Markdown</h5>
-  {% highlight markdown -%}
-  {{- markdown_text | strip -}}
-  {%- endhighlight %}
+<h5>Markdown</h5>
+{% highlight markdown -%}
+{{- markdown_text | strip -}}
+{%- endhighlight %}
 
-  <h5>BibTeX</h5>
-  {% highlight bibtex -%}
-  {{- entry.bibtex | hideCustomBibtex -}}
-  {%- endhighlight %}
+<h5>BibTeX</h5>
+{% highlight bibtex -%}
+{{- entry.bibtex | hideCustomBibtex -}}
+{%- endhighlight %}
 </div>
