@@ -2,7 +2,7 @@
 layout: paper
 title: >
   🇮🇹 Paper accepted at CLiC-it 2026: <i>Dromedario 3</i>&nbsp; 🐪
-date: 2026-09-14
+date: 2026-07-17
 inline: false
 related_posts: false
 bib_key: gioffre-2026-dromedario3
