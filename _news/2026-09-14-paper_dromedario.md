@@ -21,8 +21,11 @@ shields:
       color: FCD21D,
       url: "https://huggingface.co/datasets/sapienzanlp/dromedario-3-sft-dataset",
     }
-  - { label: GitHub, message: Code, color: blue, url: "https://github.com/sapienzanlp/" }
+  - { label: GitHub, message: Code, color: blue, url: "https://github.com/sapienzanlp/Dromedario_3" }
 ---
+
+> ⚠️ *Proceedings to be published soon*.
+{: .notice--info}
 
 <center>
     <div style="width: 30%; overflow: hidden;">

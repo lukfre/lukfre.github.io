@@ -6,8 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Luca
 middle_name:
 last_name: Gioffré
-contact_note: > # the ">" symbol means to ignore newlines until new field — keeps the formatting of the note intact
-  "Best reached via email — I reply within a few days."
+contact_note:
 description: > # description used in meta tags / SEO (Search Engine Optimization)
   Personal website of Luca Gioffré. 
   PhD Student in NLP at Sapienza University of Rome. 
@@ -22,7 +21,7 @@ icon: 🧑‍💻 # TODO: change to your preferred emoji or provide an image pat
 
 url: https://lukfre.github.io
 baseurl: ""
-last_updated: false # set to true to show "last updated" in the footer
+last_updated: true # set to true to show "last updated" in the footer
 impressum_path: # set if you need an impressum page (EU GDPR)
 back_to_top: true
 
