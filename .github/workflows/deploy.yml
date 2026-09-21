@@ -98,6 +98,10 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Disable Jekyll on the published branch 🚫
+        # gh-pages holds an already-built site. Without .nojekyll, GitHub Pages
+        # runs Jekyll over it again, which hides any path starting with "_".
+        run: touch _site/.nojekyll
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
