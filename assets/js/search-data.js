@@ -121,7 +121,12 @@ ninja.data = [{
           title: '🇮🇹 Paper accepted at CLiC-it 2026: Dromedario 3&amp;amp;nbsp; 🐪',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/2026-09-14-paper_dromedario/";
+              window.location.href = "/news/2026-07-17-paper_dromedario/";
+            },},{id: "news-best-student-paper-award-at-clic-it-2026",
+          title: '🏆 Best Student Paper Award at CLiC-it 2026!',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2026-09-16-award_dromedario/";
             },},{
         id: 'social-scholar',
         title: 'Google Scholar',
