@@ -1,7 +1,7 @@
 ---
 layout: paper
 title: >
-    🇮🇹 Paper accepted at EVALITA 2026: <i>INDAQA 2</i>
+  🇮🇹 Paper accepted at EVALITA 2026: <i>INDAQA 2</i>
 date: 2026-02-07
 inline: false
 related_posts: true

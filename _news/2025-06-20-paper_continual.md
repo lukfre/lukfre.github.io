@@ -1,7 +1,7 @@
 ---
 layout: paper
 title: >
-    🇮🇹 Paper accepted at CLiC-it 2025: <i>What We Learned from Continually Training Minerva</i>
+  🇮🇹 Paper accepted at CLiC-it 2025: <i>What We Learned from Continually Training Minerva</i>
 date: 2025-07-21
 inline: false
 related_posts: false
@@ -41,5 +41,5 @@ We contribute INDAQA to the community and demonstrate the importance of evaluati
 
 ---
 
-*[LLM]: Large Language Model
-*[OE]: Open-ended, also known as _free-form_
+_[LLM]: Large Language Model
+_[OE]: Open-ended, also known as _free-form_

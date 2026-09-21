@@ -1,7 +1,7 @@
 ---
 layout: paper
 title: >
-    🇦🇹 Paper accepted at ACL 2025: <i>Right Answer, Wrong Score</i>
+  🇦🇹 Paper accepted at ACL 2025: <i>Right Answer, Wrong Score</i>
 date: 2025-06-16
 inline: false
 related_posts: false

@@ -1,7 +1,7 @@
 ---
 layout: paper
 title: >
-    🇨🇳 Paper accepted at EMNLP 2025: <i>LiteraryQA</i>
+  🇨🇳 Paper accepted at EMNLP 2025: <i>LiteraryQA</i>
 date: 2025-08-22
 inline: false
 related_posts: false

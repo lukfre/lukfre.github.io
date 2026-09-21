@@ -64,11 +64,17 @@
     runs content through Rouge, which is what produces the syntax colouring.
   {%- endcomment -%}
   <h5>Plain text</h5>
-  {% highlight text %}{{ plain_text | strip }}{% endhighlight %}
+  {% highlight text -%}
+  {{- plain_text | strip -}}
+  {%- endhighlight %}
 
   <h5>Markdown</h5>
-  {% highlight markdown %}{{ markdown_text | strip }}{% endhighlight %}
+  {% highlight markdown -%}
+  {{- markdown_text | strip -}}
+  {%- endhighlight %}
 
   <h5>BibTeX</h5>
-  {% highlight bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endhighlight %}
+  {% highlight bibtex -%}
+  {{- entry.bibtex | hideCustomBibtex -}}
+  {%- endhighlight %}
 </div>

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <code>Narrative Understanding</code> ⋅ <code>Storytelling</code> ⋅ <code>Information Extraction</code> ⋅ <code>LLM post-training</code> ⋅ <code>Benchmark & Meta-evaluation</code> ⋅ <code>Multilinguality</code> 
+subtitle: <code>Narrative Understanding</code> ⋅ <code>Storytelling</code> ⋅ <code>Information Extraction</code> ⋅ <code>LLM post-training</code> ⋅ <code>Benchmark & Meta-evaluation</code> ⋅ <code>Multilinguality</code>
 
 profile:
   align: right

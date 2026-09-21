@@ -1,15 +1,25 @@
 name: Render a CV
+
+# DISABLED: the automatic push trigger is commented out.
+#
+# _data/cv.yml is not valid against RenderCV's schema — `cv.summary` and
+# `cv.address` are not fields it recognises, and the Publications section is
+# empty because the website renders publications from _bibliography/papers.bib
+# instead (see _layouts/cv.liquid). Nothing on the site uses this workflow's
+# output: assets/rendercv/rendercv_output/ is empty and unreferenced, and
+# _pages/cv.md links a hand-maintained /assets/pdf/CV.pdf.
+#
+# Re-enable by uncommenting the push block below, after making cv.yml conform.
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "_data/cv.yml"
-      - "assets/rendercv/design.yaml"
-      - "assets/rendercv/locale.yaml"
-      - "assets/rendercv/settings.yaml"
-  workflow_call:
+  # push:
+  #   branches:
+  #     - main
+  #     - master
+  #   paths:
+  #     - "_data/cv.yml"
+  #     - "assets/rendercv/design.yaml"
+  #     - "assets/rendercv/locale.yaml"
+  #     - "assets/rendercv/settings.yaml"
   workflow_dispatch:
 permissions:
   contents: write

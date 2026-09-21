@@ -14,5 +14,4 @@ tags: ["Bioinformatics", "University project"]
 [![GitLab](https://img.shields.io/badge/GitLab-Code-E24329)](https://gitlab.com/zascerta/bioinformatics_project_2_2020)
 {: .text-center}
 
-
 Second homework for the BINM course: brain network study during resting states (EEG data of subjects at rest in eyes-open and eyes-closed conditions).
