@@ -5,7 +5,7 @@ title: >
 date: 2026-02-07
 inline: false
 related_posts: true
-bib_key: gioffre-etal-2026-INDAQA2
+bib_key: gioffre-etal-2026-indaqa2
 flag: 🇮🇹
 logo: assets/img/logo-EVALITA.png
 logo_width: 30%
