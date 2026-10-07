@@ -6,7 +6,8 @@
   editor    = {Basile, Valerio and Croce, Danilo and Passaro, Lucia C. and Pirrone, Roberto},
   year      = {2026},
   address   = {Palermo, Italy},
-  month     = sep
+  month     = sep,
+  abstract  = "Despite growing interest in supervised fine-tuning (SFT) datasets, nearly all existing resources are English-only or English-dominated, leaving Italian without a comparable resource. To bridge this gap, we introduce Dromedario 3, a large-scale Italian instruction-following dataset of approximately 630K translated instruction-response pairs derived from the Tülu 3 SFT mixture. Rather than translating the entire mixture, we first apply a multi-stage filtering pipeline. Specifically, we combine source-dataset filtering with automatic task and domain classification based on the Super-NaturalInstructions taxonomy to exclude language-bound tasks, while existing non-English instances are retained untranslated to preserve multilingual diversity. The selected instances are translated using TranslateGemma-27B and post-processed to remove faulty outputs. Manual validation confirms the reliability of both the automatic classification (accuracy above 87\% for task labels and 95\% for domain labels) and the machine translations (correctness above 95\%). We further conduct a mixing study evaluating five SFT recipes with varying Italian-to-English compositions on parallel Italian and English benchmarks using two models, Llama 3.1 8B and Minerva 7B. The model with stronger Italian pretraining benefits substantially from Italian SFT data in generative settings, while recipes combining both languages offer the most robust trade-off between gains in Italian and preservation of English capabilities. "
 }
 
 @inproceedings{gioffre-etal-2026-indaqa2,
