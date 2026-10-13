@@ -6,7 +6,7 @@ subtitle: <code>Narrative Understanding</code> ⋅ <code>Storytelling</code> ⋅
 
 profile:
   align: right
-  image: bio-photo.png
+  image: bio-photo-web.jpg
   image_circular: true # crops the image to make it circular
   # more_info: >
   #  <p>555 your office number</p>
