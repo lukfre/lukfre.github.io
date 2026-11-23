@@ -24,8 +24,7 @@ shields:
   - { label: GitHub, message: Code, color: blue, url: "https://github.com/sapienzanlp/Dromedario_3" }
 ---
 
-> ⚠️ *Proceedings to be published soon*.
-{: .notice--info}
+> ⚠️ _Proceedings to be published soon_.
 
 <center>
     <div style="width: 30%; overflow: hidden;">
