@@ -127,6 +127,16 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/2026-09-16-award_dromedario/";
+            },},{id: "news-supervised-m-sc-student-graduates",
+          title: '🎓 Supervised M.Sc. student graduates!',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2026-10-30-graduation_lagana/";
+            },},{id: "news-invited-talk-at-law-department-sapienza",
+          title: '🎤 Invited talk at Law Department, Sapienza',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2026-11-21-invited_talk/";
             },},{
         id: 'social-scholar',
         title: 'Google Scholar',
