@@ -157,6 +157,9 @@ layout: default
               {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %}
                 {% assign entries = section_entries %}
                 {% include cv/awards.liquid %}
+              {% elsif section_title == 'Invited Talks' or section_title == 'Talks' %}
+                {% assign entries = section_entries %}
+                {% include cv/awards.liquid icon='fa-solid fa-microphone' %}
                 {% comment %}
                   {% elsif section_title == 'Publications' %}
                   {% assign entries = section_entries %}

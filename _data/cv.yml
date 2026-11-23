@@ -111,6 +111,13 @@ cv:
         awarder: "12th Italian Conference on Computational Linguistics (CLiC-it)<br><b>Committee</b>: Francesco Cutugno, Malvina Nissim, and Roberto Zamparelli"
         # summary: Francesco Cutugno, Malvina Nissim, and Roberto Zamparelli awarded the outstanding contribution to Italian NLP resources to the authors of Dromedario 3,
 
+    Invited Talks:
+      - title: "Language Models in the Legal Domain: What they are, and what they can do for legal studies"
+        url: /news/2026-11-21-invited_talk/
+        date: 2026-11-21
+        location: Rome, Italy
+        awarder: "PhD Fall School 2026, Department of Legal Sciences, Sapienza University of Rome<br><b>Host</b>: Roberta Peleggi"
+
     Publications:
       # - title: "INDAQA2 - A Large Italian Narrative QA Benchmark: A CALAMITA 2026 Challenge"
       #   authors:

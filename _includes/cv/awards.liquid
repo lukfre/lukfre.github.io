@@ -28,7 +28,7 @@
                         {% if entry.location contains 'Remote' %}
                           <i class="fa-solid fa-globe iconlocation"></i>
                         {% else %}
-                          <i class="fa-solid fa-trophy iconaward"></i>
+                          <i class="{{ include.icon | default: 'fa-solid fa-trophy' }} iconaward"></i>
                         {% endif %}
                         {{ entry.location }}
                       </p>
